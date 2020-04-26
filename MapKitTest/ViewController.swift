@@ -21,17 +21,26 @@ class ViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.startUpdatingLocation()
-        
-        mapView.showsUserLocation = true
-        
+        mapView.setUserTrackingMode(.follow, animated: true)
     }
 
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBAction func mapTypeSegmentSelected(_ sender: Any)
+    {
+        switch (sender as AnyObject).selectedSegmentIndex {
+            case 0:
+                mapView.mapType = .standard
+            case 1:
+                mapView.mapType = .satellite
+            default:
+                mapView.mapType = .hybrid
+            }
+        }
+    
+    
     fileprivate let locationManager : CLLocationManager = CLLocationManager ()
 
-    
-    
     
 }
 
