@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.startUpdatingLocation()
         IzmirTramPinsDraw()
+        
         mapView.setUserTrackingMode(.follow, animated: true)
             }
 
@@ -76,6 +77,7 @@ class ViewController: UIViewController {
         setPinUsingMKPointAnnotation(name: "IZBAN", subtitle: "Bilim Muzesi", locationname: BilimMuzesi)
         setPinUsingMKPointAnnotation(name: "IZBAN", subtitle: "Mustafa Kemal Spor Salonu", locationname: AtaturkSporSalonu)
 //        Lines Between Stops
+        showRouteOnMap(pickupCoordinate: BostanliIsk, destinationCoordinate: CarsiIzban)
         showRouteOnMap(pickupCoordinate: CarsiIzban, destinationCoordinate: VilayetEvi)
         showRouteOnMap(pickupCoordinate: VilayetEvi, destinationCoordinate: SelcukYasar)
         showRouteOnMap(pickupCoordinate: SelcukYasar, destinationCoordinate: Atakent)
@@ -149,6 +151,26 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
     renderer.strokeColor = UIColor(red: 17.0/255.0, green: 147.0/255.0, blue: 255.0/255.0, alpha: 1)
     renderer.lineWidth = 5.0
     return renderer
+    
+    
 }
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation { return nil }
 
+        if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "") {
+            annotationView.annotation = annotation
+            return annotationView
+        } else {
+            let annotationView = MKPinAnnotationView(annotation:annotation, reuseIdentifier:"")
+            annotationView.isEnabled = true
+            annotationView.canShowCallout = true
+
+            let btn = UIButton(type: .detailDisclosure)
+            annotationView.rightCalloutAccessoryView = btn
+            return annotationView
+        }
     }
+  
+
+
+}
