@@ -187,7 +187,7 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
             if identifier == "moreDetail" {
                 if let annotation = sender as? MKPointAnnotation {
                     let ViewTwo = segue.destination as! moreDetail
-                    let pin:String? = annotation.title
+                    let pin:String = annotation.title!
                     ViewTwo.setStation(input: pin)
 
                 }

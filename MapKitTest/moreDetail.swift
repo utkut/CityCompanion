@@ -9,32 +9,36 @@
 import Foundation
 import UIKit
 
+
 class moreDetail : UIViewController {
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        var title = self.etaLabel.text
+        setStation(input: "Station Name")
     }
     
     @IBOutlet weak var imageView: UIImageView!
-
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var stationName: UILabel!
     @IBOutlet weak var etaLabel: UILabel!
     
 
-    func setStation(input: String?){
-        
-//        if (input != nil){
-//        var data = input!
-//            data = self.stationName?.text!
-//        print(data)
-//        }
-//        else{print("error")}
+    func setStation(input: String){
+    if (input != nil){
+        if (input == "Selcuk Yasar"){
+            title = "Selcuk Yasar";
+            print(title!)
         }
-    
-}
+        else{
+            print("No matching Name")
+        }
+        }
         
+    
+    }
+}
     
     
 
