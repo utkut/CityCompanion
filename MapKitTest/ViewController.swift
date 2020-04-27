@@ -45,7 +45,7 @@ class ViewController: UIViewController {
             }
         }
     
-    //MARK:- Coordinate Variables
+    //MARK: - Coordinate Variables
     fileprivate let locationManager : CLLocationManager = CLLocationManager ()
     let BostanliIsk = CLLocationCoordinate2D(latitude: 38.454609 , longitude: 27.098283)
     let CarsiIzban = CLLocationCoordinate2D(latitude:38.458105 , longitude: 27.094387)
