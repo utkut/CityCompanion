@@ -40,10 +40,15 @@ class ViewController: UIViewController {
                 mapView.mapType = .satellite
             default:
                 mapView.mapType = .hybrid
-                
+   
+            
                 
             }
         }
+    @IBAction func myLocationClicked(_ sender: Any) {
+        mapView.setUserTrackingMode(.follow, animated: true)
+        }
+    
     
     //MARK: - Coordinate Variables
     fileprivate let locationManager : CLLocationManager = CLLocationManager ()
@@ -68,14 +73,14 @@ class ViewController: UIViewController {
     
     //MARK: - Izmir Tram Stop Pins
     func IzmirTramPinsDraw(){
-        setPinUsingMKPointAnnotation(name: "IZBAN", subtitle: "Bostanli", locationname: BostanliIsk)
-        setPinUsingMKPointAnnotation(name: "IZBAN", subtitle: "Carsi", locationname: CarsiIzban )
-        setPinUsingMKPointAnnotation(name: "IZBAN", subtitle: "Vilayet Evi", locationname: VilayetEvi)
-        setPinUsingMKPointAnnotation(name: "IZBAN", subtitle: "Selcuk Yasar",
+        setPinUsingMKPointAnnotation(name: "Bostanli", subtitle: "Tramvay", locationname: BostanliIsk)
+        setPinUsingMKPointAnnotation(name: "Carsi", subtitle: "Tramvay", locationname: CarsiIzban )
+        setPinUsingMKPointAnnotation(name: "Vilayet Evi", subtitle: "Tramvay", locationname: VilayetEvi)
+        setPinUsingMKPointAnnotation(name: "Selcuk Yasar", subtitle: "Tramvay",
                                      locationname: SelcukYasar)
-        setPinUsingMKPointAnnotation(name: "IZBAN", subtitle: "Atakent", locationname: Atakent)
-        setPinUsingMKPointAnnotation(name: "IZBAN", subtitle: "Bilim Muzesi", locationname: BilimMuzesi)
-        setPinUsingMKPointAnnotation(name: "IZBAN", subtitle: "Mustafa Kemal Spor Salonu", locationname: AtaturkSporSalonu)
+        setPinUsingMKPointAnnotation(name: "Atakent", subtitle: "Tramvay", locationname: Atakent)
+        setPinUsingMKPointAnnotation(name: "Bilim Muzesi", subtitle: "Tramvay", locationname: BilimMuzesi)
+        setPinUsingMKPointAnnotation(name: "Mustafa Kemal Spor Salonu", subtitle: "Tramvay", locationname: AtaturkSporSalonu)
 //        Lines Between Stops
         showRouteOnMap(pickupCoordinate: BostanliIsk, destinationCoordinate: CarsiIzban)
         showRouteOnMap(pickupCoordinate: CarsiIzban, destinationCoordinate: VilayetEvi)
@@ -170,7 +175,23 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
             return annotationView
         }
     }
-  
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)  {
+       if control == view.rightCalloutAccessoryView {
+        if let annotation = view.annotation as? MKPointAnnotation {
+            performSegue(withIdentifier: "moreDetail", sender: annotation)
+            }
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "moreDetail" {
+                if let annotation = sender as? MKPointAnnotation {
+                    let ViewTwo = segue.destination as! moreDetail
+                    let pin:String? = annotation.title
+                    ViewTwo.setStation(input: pin)
 
-
+                }
+            }
+        }
+    }
 }
