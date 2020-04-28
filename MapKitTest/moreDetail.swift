@@ -15,8 +15,6 @@ class moreDetail : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var title = self.etaLabel.text
-        setStation(input: "Station Name")
     }
     
     @IBOutlet weak var imageView: UIImageView!
@@ -26,14 +24,13 @@ class moreDetail : UIViewController {
     
 
     func setStation(input: String){
-    if (input != nil){
+    // Does Not Function Yet :/
         if (input == "Selcuk Yasar"){
             title = "Selcuk Yasar";
             print(title!)
         }
         else{
             print("No matching Name")
-        }
         }
         
     
