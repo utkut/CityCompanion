@@ -76,8 +76,7 @@ class ViewController: UIViewController {
         setPinUsingMKPointAnnotation(name: "Bostanli", subtitle: "Tramvay", locationname: BostanliIsk)
         setPinUsingMKPointAnnotation(name: "Carsi", subtitle: "Tramvay", locationname: CarsiIzban )
         setPinUsingMKPointAnnotation(name: "Vilayet Evi", subtitle: "Tramvay", locationname: VilayetEvi)
-        setPinUsingMKPointAnnotation(name: "Selcuk Yasar", subtitle: "Tramvay",
-                                     locationname: SelcukYasar)
+        setPinUsingMKPointAnnotation(name: "Selcuk Yasar", subtitle: "Tramvay",locationname: SelcukYasar)
         setPinUsingMKPointAnnotation(name: "Atakent", subtitle: "Tramvay", locationname: Atakent)
         setPinUsingMKPointAnnotation(name: "Bilim Muzesi", subtitle: "Tramvay", locationname: BilimMuzesi)
         setPinUsingMKPointAnnotation(name: "Mustafa Kemal Spor Salonu", subtitle: "Tramvay", locationname: AtaturkSporSalonu)
