@@ -26,7 +26,7 @@ class moreDetail : UIViewController {
     func setStation(input: String){
     // Does Not Function Yet :/
         if (input == "Selcuk Yasar"){
-            title = "Selcuk Yasar";
+            title = "Selcuk Yasar"
             print(title!)
         }
         else{
