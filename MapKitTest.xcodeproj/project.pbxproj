@@ -15,6 +15,7 @@
 		653E293F2455451E00242E49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653E293D2455451E00242E49 /* LaunchScreen.storyboard */; };
 		6573451C2456A41B005F2A4C /* moreDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6573451B2456A41B005F2A4C /* moreDetail.swift */; };
 		65BE0011245552E7005A1D7E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BE0010245552E7005A1D7E /* MapKit.framework */; };
+		65CD1D5C24581B3100DDA67D /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CD1D5B24581B3100DDA67D /* infoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		653E29402455451F00242E49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6573451B2456A41B005F2A4C /* moreDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreDetail.swift; sourceTree = "<group>"; };
 		65BE0010245552E7005A1D7E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		65CD1D5B24581B3100DDA67D /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				653E29342455451B00242E49 /* SceneDelegate.swift */,
 				653E29362455451B00242E49 /* ViewController.swift */,
 				653E29382455451C00242E49 /* Main.storyboard */,
+				65CD1D5B24581B3100DDA67D /* infoViewController.swift */,
 				653E293B2455451E00242E49 /* Assets.xcassets */,
 				653E293D2455451E00242E49 /* LaunchScreen.storyboard */,
 				653E29402455451F00242E49 /* Info.plist */,
@@ -155,6 +158,7 @@
 			files = (
 				653E29372455451B00242E49 /* ViewController.swift in Sources */,
 				6573451C2456A41B005F2A4C /* moreDetail.swift in Sources */,
+				65CD1D5C24581B3100DDA67D /* infoViewController.swift in Sources */,
 				653E29332455451B00242E49 /* AppDelegate.swift in Sources */,
 				653E29352455451B00242E49 /* SceneDelegate.swift in Sources */,
 			);
