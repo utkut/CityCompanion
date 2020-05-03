@@ -76,13 +76,13 @@ class ViewController: UIViewController {
     
     //MARK: - Izmir Tram Stop Pins
     func IzmirTramPinsDraw(){
-        setPinUsingMKPointAnnotation(name: "Bostanli", subtitle: "Tramvay", locationname: BostanliIsk)
-        setPinUsingMKPointAnnotation(name: "Carsi", subtitle: "Tramvay", locationname: CarsiIzban )
-        setPinUsingMKPointAnnotation(name: "Vilayet Evi", subtitle: "Tramvay", locationname: VilayetEvi)
-        setPinUsingMKPointAnnotation(name: "Selcuk Yasar", subtitle: "Tramvay",locationname: SelcukYasar)
-        setPinUsingMKPointAnnotation(name: "Atakent", subtitle: "Tramvay", locationname: Atakent)
-        setPinUsingMKPointAnnotation(name: "Bilim Muzesi", subtitle: "Tramvay", locationname: BilimMuzesi)
-        setPinUsingMKPointAnnotation(name: "Mustafa Kemal Spor Salonu", subtitle: "Tramvay", locationname: AtaturkSporSalonu)
+        setPinUsingMKPointAnnotation(name: "Bostanli", subtitle: "Tramvay Istasyonu", locationname: BostanliIsk)
+        setPinUsingMKPointAnnotation(name: "Carsi", subtitle: "Tramvay Istasyonu", locationname: CarsiIzban )
+        setPinUsingMKPointAnnotation(name: "Vilayet Evi", subtitle: "Tramvay Istasyonu", locationname: VilayetEvi)
+        setPinUsingMKPointAnnotation(name: "Selcuk Yasar", subtitle: "Tramvay Istasyonu",locationname: SelcukYasar)
+        setPinUsingMKPointAnnotation(name: "Atakent", subtitle: "Tramvay Istasyonu", locationname: Atakent)
+        setPinUsingMKPointAnnotation(name: "Bilim Muzesi", subtitle: "Tramvay Istasyonu", locationname: BilimMuzesi)
+        setPinUsingMKPointAnnotation(name: "Mustafa Kemal Spor Salonu", subtitle: "Tramvay Istasyonu", locationname: AtaturkSporSalonu)
 //        Lines Between Stops
         showRouteOnMap(pickupCoordinate: BostanliIsk, destinationCoordinate: CarsiIzban)
         showRouteOnMap(pickupCoordinate: CarsiIzban, destinationCoordinate: VilayetEvi)
@@ -189,7 +189,8 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
             if identifier == "moreDetail" {
                 if let annotation = sender as? MKPointAnnotation {
                     let SecondVC = segue.destination as! moreDetail
-                    SecondVC.incomingtext = annotation.title
+                    SecondVC.incomingStationName = annotation.title
+                    SecondVC.incomingStationType = annotation.subtitle
                     
                 }
             }

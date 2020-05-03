@@ -11,7 +11,7 @@
 //
 import Foundation
 import UIKit
-
+import SafariServices
 class infoViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -26,5 +26,12 @@ class infoViewController: UIViewController {
     
     @IBOutlet weak var label2: UILabel!
     
-
+    @IBAction func visitWebsiteClicked(_ sender: Any) {
+        if let url = URL(string: "https://utkutarhan.com"){
+            let safariVC = SFSafariViewController(url: url)
+            present(safariVC, animated: true, completion: nil)
+        }
+    }
+    
+    
 }

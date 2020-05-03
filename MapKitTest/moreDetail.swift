@@ -15,43 +15,28 @@ class moreDetail : UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var stationName: UILabel!
     @IBOutlet weak var etaLabel: UILabel!
+    @IBOutlet weak var stationType: UILabel!
     
-    var incomingtext: String? = nil
-
+    
+    var incomingStationName: String? = nil
+    var incomingStationType: String? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        stationName.text = incomingtext
+        stationName.text = incomingStationName
+        stationType.text = incomingStationType
+        getTramFrequency()
     
     }
     
-    @IBOutlet weak var imageView: UIImageView!
-  
-    
 
-
-     
-   
-        
-
-    
-    
-    }
-
-    
-    
-
-
-extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
-    }
+// Function to read the frequency of Tram depending on the day.
+func getTramFrequency() {
+    let date = Date()
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEEE"
+    let dayInWeek = dateFormatter.string(from: date)
 }
+    
+}
+
