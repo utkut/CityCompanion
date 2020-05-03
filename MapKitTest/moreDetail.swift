@@ -12,30 +12,32 @@ import UIKit
 
 class moreDetail : UIViewController {
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var stationName: UILabel!
     @IBOutlet weak var etaLabel: UILabel!
     
+    var incomingtext: String? = nil
 
-    func setStation(input: String){
-    // Does Not Function Yet :/
-        if (input == "Selcuk Yasar"){
-            title = "Selcuk Yasar"
-            print(title!)
-        }
-        else{
-            print("No matching Name")
-        }
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        stationName.text = incomingtext
     
     }
-}
+    
+    @IBOutlet weak var imageView: UIImageView!
+  
+    
+
+
+     
+   
+        
+
+    
+    
+    }
+
     
     
 
