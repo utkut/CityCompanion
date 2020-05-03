@@ -18,8 +18,8 @@ class moreDetail : UIViewController {
     @IBOutlet weak var stationType: UILabel!
     
     
-    var incomingStationName: String? = nil
-    var incomingStationType: String? = nil
+    var incomingStationName: String?
+    var incomingStationType: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
