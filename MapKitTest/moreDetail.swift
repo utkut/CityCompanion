@@ -36,6 +36,38 @@ func getTramFrequency() {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "EEEE"
     let dayInWeek = dateFormatter.string(from: date)
+    
+    if (dayInWeek == "Saturday" || dayInWeek == "Monday"){
+        etaLabel.text = "No Lines Running Today."
+    }
+    else{
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.dateFormat = "HH.mm"
+        let dayinHours = dateFormatter.string(from: date)
+        
+        if let myTime = Double(dayinHours){
+            
+            if (myTime >= 06.00 && myTime < 10.00){
+                etaLabel.text = "Tram is every 7.5 minutes. "
+            }
+            if (myTime >= 10.00 && myTime < 16.00){
+                etaLabel.text = "Tram is every 40 minutes. "
+            }
+            if (myTime >= 16.00 && myTime < 21.00){
+                etaLabel.text = "Tram is every 10 minutes. "
+            }
+            if (myTime >= 21.00 && myTime < 23.59){
+                etaLabel.text = "Tram is every 40 minutes. "
+            }
+            else{
+                 etaLabel.text = "Tram is Not Running at the Moment. "
+            }
+        }
+        else{
+            etaLabel.text = "Unable to Retrieve. "
+            
+        }
+    }
 }
     
 }
