@@ -16,6 +16,7 @@
 		6573451C2456A41B005F2A4C /* moreDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6573451B2456A41B005F2A4C /* moreDetail.swift */; };
 		65BE0011245552E7005A1D7E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BE0010245552E7005A1D7E /* MapKit.framework */; };
 		65CD1D5C24581B3100DDA67D /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CD1D5B24581B3100DDA67D /* infoViewController.swift */; };
+		65F4A5F5246005DD00833C63 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F4A5F4246005DD00833C63 /* LocationSearchTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		6573451B2456A41B005F2A4C /* moreDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreDetail.swift; sourceTree = "<group>"; };
 		65BE0010245552E7005A1D7E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		65CD1D5B24581B3100DDA67D /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
+		65F4A5F4246005DD00833C63 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				653E293D2455451E00242E49 /* LaunchScreen.storyboard */,
 				653E29402455451F00242E49 /* Info.plist */,
 				6573451B2456A41B005F2A4C /* moreDetail.swift */,
+				65F4A5F4246005DD00833C63 /* LocationSearchTable.swift */,
 			);
 			path = MapKitTest;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				653E29372455451B00242E49 /* ViewController.swift in Sources */,
 				6573451C2456A41B005F2A4C /* moreDetail.swift in Sources */,
 				65CD1D5C24581B3100DDA67D /* infoViewController.swift in Sources */,
+				65F4A5F5246005DD00833C63 /* LocationSearchTable.swift in Sources */,
 				653E29332455451B00242E49 /* AppDelegate.swift in Sources */,
 				653E29352455451B00242E49 /* SceneDelegate.swift in Sources */,
 			);
@@ -311,7 +315,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.utkutarhan.MapKitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -330,7 +334,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.utkutarhan.MapKitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

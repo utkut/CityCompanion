@@ -13,24 +13,11 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UISearchBarDelegate{
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view
-        mapView.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter = kCLDistanceFilterNone
-        locationManager.startUpdatingLocation()
-        IzmirTramPinsDraw()
-        
-        mapView.setUserTrackingMode(.follow, animated: true)
-            }
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapType: UISegmentedControl!
-    
     @IBAction func infoButtonClicked(_ sender: Any) {
         self.performSegue(withIdentifier: "infoViewControllerSegue", sender: (Any).self)
     }
@@ -43,15 +30,37 @@ class ViewController: UIViewController {
                 mapView.mapType = .satellite
             default:
                 mapView.mapType = .hybrid
-   
-            
-                
             }
         }
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBAction func myLocationClicked(_ sender: Any) {
         mapView.setUserTrackingMode(.follow, animated: true)
         }
     
+    override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view
+    mapView.delegate = self
+    locationManager.requestWhenInUseAuthorization()
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    locationManager.distanceFilter = kCLDistanceFilterNone
+    locationManager.startUpdatingLocation()
+    IzmirTramPinsDraw()
+    
+    mapView.setUserTrackingMode(.follow, animated: true)
+    
+    //Search Section
+//        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable")
+//    resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+//        resultSearchController?.searchResultsUpdater = locationSearchTable as! UISearchResultsUpdating
+//    let searchBar = resultSearchController!.searchBar
+//        searchBar.sizeToFit()
+//        searchBar.placeholder = "Search for places"
+//        navigationItem.searchController = resultSearchController
+//        definesPresentationContext = true
+//        locationSearchTable.mapView = mapView
+      }
+//    var resultSearchController:UISearchController? = nil
     
     //MARK: - Coordinate Variables
     fileprivate let locationManager : CLLocationManager = CLLocationManager ()

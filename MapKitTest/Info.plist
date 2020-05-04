@@ -40,7 +40,7 @@
 	<key>NSLocationUsageDescription</key>
 	<string>MapKit Test Requires Location Data.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>MapKit Test Requires Location Data.</string>
+	<string>MapKit Test requires location data to Understand your location.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -5,6 +5,10 @@
 //  Created by Utku Tarhan on 4/26/20.
 //  Copyright © 2020 Utku Tarhan. All rights reserved.
 //
+//  The code was written for personal/educational purposes on San Francisco State University
+//  Does not infringe any conflict of interest with Apple Business Conduct 2020.
+//
+//
 
 import Foundation
 import UIKit
@@ -37,7 +41,7 @@ func getTramFrequency() {
     dateFormatter.dateFormat = "EEEE"
     let dayInWeek = dateFormatter.string(from: date)
     
-    if (dayInWeek == "Saturday" || dayInWeek == "Monday"){
+    if (dayInWeek == "Saturday" || dayInWeek == "Sunday"){
         etaLabel.text = "No Lines Running Today."
     }
     else{
