@@ -22,6 +22,15 @@ class moreDetail : UIViewController {
         let location: LocationJson
         let name: String
         let stations: [Station]
+        
+        init(company:[String] , href:String, id:String, location:LocationJson, name:String, stations:[Station] )  {
+            self.company = company
+            self.href = href
+            self.id = id
+            self.location = location
+            self.name = name
+            self.stations = stations
+        }
 
     }
 
@@ -55,6 +64,12 @@ class moreDetail : UIViewController {
         let country: String
         let latitude: Double
         let longitude: Double
+        init(city: String, country:String, latitude:Double, longitude:Double) {
+            self.city = city
+            self.country = country
+            self.latitude = latitude
+            self.longitude = longitude
+        }
     }
 
 
@@ -63,6 +78,12 @@ class moreDetail : UIViewController {
         let status: String
         let uid: String
         
+        init(slots:Int, status: String, uid: String) {
+            self.slots = slots
+            self.status = status
+            self.uid = uid
+        }
+        
     }
     
     @IBOutlet weak var tableView: UITableView!
@@ -70,7 +91,6 @@ class moreDetail : UIViewController {
     @IBOutlet weak var etaLabel: UILabel!
     @IBOutlet weak var stationType: UILabel!
     
-    var StationList = [Station]()
     var incomingStationName: String?
     var incomingStationType: String?
     
@@ -79,6 +99,7 @@ class moreDetail : UIViewController {
         stationName.text = incomingStationName
         stationType.text = incomingStationType
         getTramFrequency()
+        
     
     }
     
@@ -126,8 +147,7 @@ func getTramFrequency() {
     if (incomingStationType == "Bisim"){
         
         if (incomingStationName == "Mavisehir"){
-            getBikeData()
-            print(StationList.isEmpty)
+            getBikeData(stationName: "Mavişehir")
             
         }
     }
@@ -135,13 +155,17 @@ func getTramFrequency() {
     
     
 }
- func getBikeData(){
-   guard let url = URL(
-       string: "https://api.citybik.es//v2/networks/baksi-bisim"
-   ) else { return }
+    func getBikeData(stationName:String){
+
+   guard let url = URL(string: "https://api.citybik.es//v2/networks/baksi-bisim")
+    else {
+        print("Failed to Reach to the Bisim Data.")
+    return
+    
+        }
 
    let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-       guard let dataResponse = data, error == nil else {
+           guard let dataResponse = data, error == nil else {
            print(error?.localizedDescription ?? "Response Error")
            return
        }
@@ -156,12 +180,18 @@ func getTramFrequency() {
                //here dataResponse received from a network request
                let decoder = JSONDecoder()
                //Decode JSON Response Data
-
-               let model = try decoder.decode(
-                   ResponseJSON.self, from: dataResponse
-               )
+            
+            let model = try decoder.decode(ResponseJSON.self, from: dataResponse)
             print(model)//Output - 1221
             
+            if let station = model.network.stations.first(where: { $0.name == stationName }) {
+            //get the properties of station here as per requirement
+                let emptySlots = station.empty_slots
+                let freeBikes = station.free_bikes
+                let Status = station.extra.status
+                print(emptySlots, freeBikes, Status)
+                
+            }
            }
            catch let parsingError {
                print("Error", parsingError)
@@ -170,10 +200,10 @@ func getTramFrequency() {
         } catch let parsingError {
            print("Error", parsingError)
         }
-         
+    
    }
    task.resume()
+    
 
  }
-
 }
