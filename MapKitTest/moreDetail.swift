@@ -164,7 +164,7 @@ func getTramFrequency() {
     
         }
 
-   let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+   let task = URLSession.shared.dataTask(with: url) { (data, _, error) in
            guard let dataResponse = data, error == nil else {
            print(error?.localizedDescription ?? "Response Error")
            return
