@@ -46,7 +46,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
     locationManager.distanceFilter = kCLDistanceFilterNone
     locationManager.startUpdatingLocation()
     IzmirTramPinsDraw()
-    
+    IzmirBisimPinsDraw()
     mapView.setUserTrackingMode(.follow, animated: true)
     
     //Search Section
@@ -71,6 +71,10 @@ class ViewController: UIViewController, UISearchBarDelegate{
     let Atakent = CLLocationCoordinate2D(latitude:38.468012 , longitude: 27.087788)
     let BilimMuzesi = CLLocationCoordinate2D(latitude:38.474204 , longitude: 27.082427)
     let AtaturkSporSalonu = CLLocationCoordinate2D(latitude:38.475412 , longitude: 27.074681)
+    
+    // Bisim Variables
+    
+    let MavisehirBisim = CLLocationCoordinate2D(latitude: 38.4674834,longitude: 27.0793412)
     
     
     func setPinUsingMKPointAnnotation(name:String, subtitle: String, locationname:CLLocationCoordinate2D ){
@@ -102,6 +106,9 @@ class ViewController: UIViewController, UISearchBarDelegate{
         
     }
     
+    func IzmirBisimPinsDraw() {
+        setPinUsingMKPointAnnotation(name: "Mavisehir", subtitle: "Bisim", locationname: MavisehirBisim)
+    }
 
     // MARK: - showRouteOnMap
 
