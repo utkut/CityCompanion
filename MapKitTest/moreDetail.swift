@@ -114,6 +114,9 @@ func getTramFrequency() {
     let dayInWeek = dateFormatter.string(from: date)
     if (incomingStationType == "Tramvay Istasyonu"){
         
+        firstCellLabel.isHidden = true
+        secondCellLabel.isHidden = true
+        
         if (dayInWeek == "Saturday" || dayInWeek == "Sunday"){
             etaLabel.text = "No Lines Running Today."
         }
@@ -147,6 +150,8 @@ func getTramFrequency() {
         }
     }
     if (incomingStationType == "Bisim"){
+        firstCellLabel.isHidden = false
+        secondCellLabel.isHidden = false
         
         if (incomingStationName == "Mavisehir"){
             
