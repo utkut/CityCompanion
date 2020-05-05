@@ -91,7 +91,10 @@ class moreDetail : UIViewController {
     @IBOutlet weak var stationName: UILabel!
     @IBOutlet weak var etaLabel: UILabel!
     @IBOutlet weak var stationType: UILabel!
-
+    @IBOutlet weak var statusImageView: UIImageView!
+    @IBOutlet weak var emptyBikeImageView: UIImageView!
+    @IBOutlet weak var freeBikeImageView: UIImageView!
+    
     
     var incomingStationName: String?
     var incomingStationType: String?
@@ -116,6 +119,9 @@ func getTramFrequency() {
         
         firstCellLabel.isHidden = true
         secondCellLabel.isHidden = true
+        statusImageView.isHidden = true
+        emptyBikeImageView.isHidden = true
+        freeBikeImageView.isHidden = true
         
         if (dayInWeek == "Saturday" || dayInWeek == "Sunday"){
             etaLabel.text = "No Lines Running Today."
@@ -154,10 +160,19 @@ func getTramFrequency() {
         secondCellLabel.isHidden = false
         
         if (incomingStationName == "Mavisehir"){
-            
             getBikeData(stationName: "Mavişehir")
-            
         }
+        
+        if (incomingStationName == "Balikci Barinagi"){
+            getBikeData(stationName: "Mavişehir Balıkçı Barınağı")
+        }
+        if (incomingStationName == "Karşıyaka Iskele"){
+            getBikeData(stationName: "Karşıyaka iskele")
+        }
+        if(incomingStationName == "Mavi Bahçe"){
+            getBikeData(stationName: "Mavi Bahçe")
+        }
+        
     }
     
     
@@ -193,8 +208,28 @@ func getTramFrequency() {
 //                    self.freeBikesLabel.text = String(station.free_bikes)
                  
                     self.firstCellLabel.text = "Empty Bike Slots: " + String(station.empty_slots)
-                    self.secondCellLabel.text = "Free Bike Slots: " + String(station.free_bikes)
+                    self.secondCellLabel.text = "Free Bikes: " + String(station.free_bikes)
                     self.etaLabel.text = "Station Status: " + station.extra.status
+//                    Status Location Icons
+                    if (station.extra.status == "Active"){
+                        self.statusImageView.image = UIImage(named: "available.png")
+                        if (station.empty_slots == 0) {
+                            self.emptyBikeImageView.image = UIImage(named: "unavailable.png")
+                        }
+                        else{
+                            self.emptyBikeImageView.image = UIImage(named: "available.png")
+                        }
+                        if (station.free_bikes == 0){
+                            self.freeBikeImageView.image = UIImage(named: "unavailable.png")
+                        }
+                        else{
+                            self.freeBikeImageView.image = UIImage(named: "available.png")
+                        }
+                    }
+                    else{
+                        self.statusImageView.image = UIImage(named: "unavailable.png")
+                    }
+                
                 }
             
             }

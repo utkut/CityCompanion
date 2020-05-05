@@ -75,8 +75,9 @@ class ViewController: UIViewController, UISearchBarDelegate{
     // Bisim Variables
     
     let MavisehirBisim = CLLocationCoordinate2D(latitude: 38.4674834,longitude: 27.0793412)
-    
-    
+    let BalikciBarinagi = CLLocationCoordinate2D(latitude: 38.465435, longitude: 27.0817107)
+    let KarsiyakaIsk = CLLocationCoordinate2D(latitude:38.4552765126, longitude: 27.120318845)
+    let Mavibahce = CLLocationCoordinate2D(latitude:38.4749864, longitude: 27.0747371)
     func setPinUsingMKPointAnnotation(name:String, subtitle: String, locationname:CLLocationCoordinate2D ){
        let annotation = MKPointAnnotation()
        annotation.coordinate = locationname
@@ -108,6 +109,9 @@ class ViewController: UIViewController, UISearchBarDelegate{
     
     func IzmirBisimPinsDraw() {
         setPinUsingMKPointAnnotation(name: "Mavisehir", subtitle: "Bisim", locationname: MavisehirBisim)
+        setPinUsingMKPointAnnotation(name: "Balikci Barinagi", subtitle: "Bisim", locationname: BalikciBarinagi)
+        setPinUsingMKPointAnnotation(name: "Karşıyaka Iskele", subtitle: "Bisim", locationname: KarsiyakaIsk)
+        setPinUsingMKPointAnnotation(name:  "Mavi Bahçe", subtitle: "Bisim", locationname: Mavibahce)
     }
 
     // MARK: - showRouteOnMap
