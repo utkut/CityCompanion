@@ -85,11 +85,13 @@ class moreDetail : UIViewController {
         }
         
     }
-    
-    @IBOutlet weak var tableView: UITableView!
+
+    @IBOutlet weak var firstCellLabel: UILabel!
+    @IBOutlet weak var secondCellLabel: UILabel!
     @IBOutlet weak var stationName: UILabel!
     @IBOutlet weak var etaLabel: UILabel!
     @IBOutlet weak var stationType: UILabel!
+
     
     var incomingStationName: String?
     var incomingStationType: String?
@@ -147,6 +149,7 @@ func getTramFrequency() {
     if (incomingStationType == "Bisim"){
         
         if (incomingStationName == "Mavisehir"){
+            
             getBikeData(stationName: "Mavişehir")
             
         }
@@ -157,13 +160,7 @@ func getTramFrequency() {
 }
     func getBikeData(stationName:String){
 
-   guard let url = URL(string: "https://api.citybik.es//v2/networks/baksi-bisim")
-    else {
-        print("Failed to Reach to the Bisim Data.")
-    return
-    
-        }
-
+    if let url = URL(string: "https://api.citybik.es//v2/networks/baksi-bisim"){
    let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
            guard let dataResponse = data, error == nil else {
            print(error?.localizedDescription ?? "Response Error")
@@ -186,12 +183,17 @@ func getTramFrequency() {
             
             if let station = model.network.stations.first(where: { $0.name == stationName }) {
             //get the properties of station here as per requirement
-                let emptySlots = station.empty_slots
-                let freeBikes = station.free_bikes
-                let Status = station.extra.status
-                print(emptySlots, freeBikes, Status)
-                
+                DispatchQueue.main.async {
+//                    self.emptySlotsLabel.text = String(station.empty_slots)
+//                    self.freeBikesLabel.text = String(station.free_bikes)
+                 
+                    self.firstCellLabel.text = "Empty Bike Slots: " + String(station.empty_slots)
+                    self.secondCellLabel.text = "Free Bike Slots: " + String(station.free_bikes)
+                    self.etaLabel.text = "Station Status: " + station.extra.status
+                }
+            
             }
+            
            }
            catch let parsingError {
                print("Error", parsingError)
@@ -201,9 +203,10 @@ func getTramFrequency() {
            print("Error", parsingError)
         }
     
+    
    }
    task.resume()
-    
 
  }
+}
 }
