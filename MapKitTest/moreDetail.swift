@@ -34,7 +34,6 @@ class moreDetail : UIViewController {
 
     }
 
-
     struct Station: Codable {
         let empty_slots: Int
         let extra: Extra
@@ -72,7 +71,6 @@ class moreDetail : UIViewController {
         }
     }
 
-
     struct Extra: Codable {
         let slots: Int
         let status: String
@@ -86,6 +84,7 @@ class moreDetail : UIViewController {
         
     }
 
+    @IBOutlet weak var timestampLabel: UILabel!
     @IBOutlet weak var firstCellLabel: UILabel!
     @IBOutlet weak var secondCellLabel: UILabel!
     @IBOutlet weak var stationName: UILabel!
@@ -105,7 +104,6 @@ class moreDetail : UIViewController {
         stationType.text = incomingStationType
         getTramFrequency()
         
-    
     }
     
 
@@ -119,7 +117,7 @@ func getTramFrequency() {
         
         firstCellLabel.isHidden = true
         secondCellLabel.isHidden = true
-        statusImageView.isHidden = true
+        statusImageView.isHidden = false
         emptyBikeImageView.isHidden = true
         freeBikeImageView.isHidden = true
         
@@ -132,21 +130,26 @@ func getTramFrequency() {
             let dayinHours = dateFormatter.string(from: date)
             
             if let myTime = Double(dayinHours){
-                
                 if (myTime >= 06.00 && myTime < 10.00){
                     etaLabel.text = "Tram is every 7.5 minutes. "
+                    statusImageView.image = UIImage(named: "available.png")
                 }
                 if (myTime >= 10.00 && myTime < 16.00){
                     etaLabel.text = "Tram is every 40 minutes. "
+                    statusImageView.image = UIImage(named: "available.png")
                 }
                 if (myTime >= 16.00 && myTime < 21.00){
                     etaLabel.text = "Tram is every 10 minutes. "
+                    statusImageView.image = UIImage(named: "available.png")
                 }
                 if (myTime >= 21.00 && myTime < 23.59){
                     etaLabel.text = "Tram is every 40 minutes. "
+                    statusImageView.image = UIImage(named: "available.png")
                 }
-                else{
-                     etaLabel.text = "Tram is Not Running at the Moment. "
+                if (myTime >= 0 && myTime < 5.59){
+                    etaLabel.text = "Tram is Not Running at the Moment. "
+                    print(myTime)
+                    statusImageView.image = UIImage(named: "unavailable.png")
                 }
             }
             else{
@@ -158,11 +161,14 @@ func getTramFrequency() {
     if (incomingStationType == "Bisim"){
         firstCellLabel.isHidden = false
         secondCellLabel.isHidden = false
+        dateFormatter.dateFormat = "HH:mm"
+        let timeinhms = dateFormatter.string(from: date)
+        let timestamp = String(timeinhms)
+        self.timestampLabel.text! = timestamp
         
         if (incomingStationName == "Mavisehir"){
             getBikeData(stationName: "Mavişehir")
         }
-        
         if (incomingStationName == "Balikci Barinagi"){
             getBikeData(stationName: "Mavişehir Balıkçı Barınağı")
         }
@@ -172,7 +178,21 @@ func getTramFrequency() {
         if(incomingStationName == "Mavi Bahçe"){
             getBikeData(stationName: "Mavi Bahçe")
         }
-        
+        if(incomingStationName == "Bostanlı Spor Tesisleri"){
+            getBikeData(stationName: "Bostanlı Spor Tesisleri")
+        }
+        if(incomingStationName == "Yunuslar"){
+            getBikeData(stationName: "Yunuslar")
+        }
+        if(incomingStationName == "Evlendirme Dairesi"){
+            getBikeData(stationName: "Karşıyaka Evlendirme Dairesi")
+        }
+        if (incomingStationName == "Churchill") {
+            getBikeData(stationName: "Bostanlı Odağı")
+        }
+        if incomingStationName == "Bostanli Iskele" {
+            getBikeData(stationName: "Bostanlı iskele ")
+        }
     }
     
     
@@ -247,6 +267,6 @@ func getTramFrequency() {
    }
    task.resume()
 
- }
-}
+        }
+    }
 }

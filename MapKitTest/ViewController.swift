@@ -78,11 +78,17 @@ class ViewController: UIViewController, UISearchBarDelegate{
     let BalikciBarinagi = CLLocationCoordinate2D(latitude: 38.465435, longitude: 27.0817107)
     let KarsiyakaIsk = CLLocationCoordinate2D(latitude:38.4552765126, longitude: 27.120318845)
     let Mavibahce = CLLocationCoordinate2D(latitude:38.4749864, longitude: 27.0747371)
+    let BostanliSporTesisleri = CLLocationCoordinate2D(latitude:38.4622502557, longitude: 27.0849728096)
+    let Yunuslar = CLLocationCoordinate2D(latitude:38.4511789658, longitude: 27.1041118947)
+    let KSKEvlendirme = CLLocationCoordinate2D(latitude: 38.4494793514, longitude: 27.1105867977)
+    let Churchill = CLLocationCoordinate2D(latitude: 38.456065695, longitude:27.0926334293)
+    let BostanliIskBisim = CLLocationCoordinate2D(latitude: 38.45471, longitude: 27.096761)
     func setPinUsingMKPointAnnotation(name:String, subtitle: String, locationname:CLLocationCoordinate2D ){
        let annotation = MKPointAnnotation()
        annotation.coordinate = locationname
        annotation.title = name
        annotation.subtitle = subtitle
+        
        let coordinateRegion = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 800, longitudinalMeters: 800)
        mapView.setRegion(coordinateRegion, animated: true)
        mapView.addAnnotation(annotation)
@@ -108,10 +114,17 @@ class ViewController: UIViewController, UISearchBarDelegate{
     }
     
     func IzmirBisimPinsDraw() {
+        
         setPinUsingMKPointAnnotation(name: "Mavisehir", subtitle: "Bisim", locationname: MavisehirBisim)
         setPinUsingMKPointAnnotation(name: "Balikci Barinagi", subtitle: "Bisim", locationname: BalikciBarinagi)
         setPinUsingMKPointAnnotation(name: "Karşıyaka Iskele", subtitle: "Bisim", locationname: KarsiyakaIsk)
         setPinUsingMKPointAnnotation(name:  "Mavi Bahçe", subtitle: "Bisim", locationname: Mavibahce)
+        setPinUsingMKPointAnnotation(name: "Bostanlı Spor Tesisleri", subtitle: "Bisim", locationname: BostanliSporTesisleri)
+        setPinUsingMKPointAnnotation(name: "Yunuslar", subtitle: "Bisim", locationname: Yunuslar)
+        setPinUsingMKPointAnnotation(name: "Evlendirme Dairesi", subtitle: "Bisim", locationname: KSKEvlendirme)
+        setPinUsingMKPointAnnotation(name: "Churchill", subtitle: "Bisim", locationname: Churchill)
+        setPinUsingMKPointAnnotation(name: "Bostanli Iskele", subtitle: "Bisim", locationname: BostanliIskBisim)
+        
     }
 
     // MARK: - showRouteOnMap
@@ -186,16 +199,22 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
 
         if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "") {
             annotationView.annotation = annotation
+            
             return annotationView
         } else {
             let annotationView = MKPinAnnotationView(annotation:annotation, reuseIdentifier:"")
             annotationView.isEnabled = true
             annotationView.canShowCallout = true
-
+           
+            if annotation.subtitle == "Bisim" {
+                annotationView.pinTintColor = .systemBlue
+            }
+            
             let btn = UIButton(type: .detailDisclosure)
             annotationView.rightCalloutAccessoryView = btn
             return annotationView
         }
+       
     }
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)  {
        if control == view.rightCalloutAccessoryView {
@@ -204,6 +223,8 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
             }
         }
     }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             if identifier == "moreDetail" {
