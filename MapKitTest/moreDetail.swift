@@ -123,6 +123,7 @@ func getTramFrequency() {
         
         if (dayInWeek == "Saturday" || dayInWeek == "Sunday"){
             etaLabel.text = "No Lines Running Today."
+            timestamp()
         }
         else{
             dateFormatter.timeZone = TimeZone.current
@@ -133,23 +134,28 @@ func getTramFrequency() {
                 if (myTime >= 06.00 && myTime < 10.00){
                     etaLabel.text = "Tram is every 7.5 minutes. "
                     statusImageView.image = UIImage(named: "available.png")
+                    timestamp()
                 }
                 if (myTime >= 10.00 && myTime < 16.00){
                     etaLabel.text = "Tram is every 40 minutes. "
                     statusImageView.image = UIImage(named: "available.png")
+                    timestamp()
                 }
                 if (myTime >= 16.00 && myTime < 21.00){
                     etaLabel.text = "Tram is every 10 minutes. "
                     statusImageView.image = UIImage(named: "available.png")
+                    timestamp()
                 }
                 if (myTime >= 21.00 && myTime < 23.59){
                     etaLabel.text = "Tram is every 40 minutes. "
                     statusImageView.image = UIImage(named: "available.png")
+                    timestamp()
                 }
                 if (myTime >= 0 && myTime < 5.59){
                     etaLabel.text = "Tram is Not Running at the Moment. "
                     print(myTime)
                     statusImageView.image = UIImage(named: "unavailable.png")
+                    timestamp()
                 }
             }
             else{
@@ -161,10 +167,7 @@ func getTramFrequency() {
     if (incomingStationType == "Bisim"){
         firstCellLabel.isHidden = false
         secondCellLabel.isHidden = false
-        dateFormatter.dateFormat = "HH:mm"
-        let timeinhms = dateFormatter.string(from: date)
-        let timestamp = String(timeinhms)
-        self.timestampLabel.text! = timestamp
+        timestamp()
         
         if (incomingStationName == "Mavisehir"){
             getBikeData(stationName: "Mavişehir")
@@ -198,6 +201,15 @@ func getTramFrequency() {
     
     
 }
+    func timestamp(){
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let timeinhms = dateFormatter.string(from: date)
+        let timestamp = String(timeinhms)
+        self.timestampLabel.text! = timestamp
+    }
+    
     func getBikeData(stationName:String){
 
     if let url = URL(string: "https://api.citybik.es//v2/networks/baksi-bisim"){
@@ -268,5 +280,8 @@ func getTramFrequency() {
    task.resume()
 
         }
+        
+       
     }
+    
 }
