@@ -13,9 +13,13 @@
 import UIKit
 import MapKit
 
+protocol HandleMapSearch {
+    func dropPinZoomIn(_ placemark: MKPlacemark)
+}
+
 class ViewController: UIViewController, UISearchBarDelegate{
 
-
+    var selectedPin: MKPlacemark?
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapType: UISegmentedControl!
     @IBAction func infoButtonClicked(_ sender: Any) {
@@ -32,10 +36,11 @@ class ViewController: UIViewController, UISearchBarDelegate{
                 mapView.mapType = .hybrid
             }
         }
-    @IBOutlet weak var searchBar: UISearchBar!
+   
     @IBAction func myLocationClicked(_ sender: Any) {
         mapView.setUserTrackingMode(.follow, animated: true)
         }
+    var resultSearchController: UISearchController?
     
     override func viewDidLoad() {
     super.viewDidLoad()
@@ -48,17 +53,24 @@ class ViewController: UIViewController, UISearchBarDelegate{
     IzmirTramPinsDraw()
     IzmirBisimPinsDraw()
     mapView.setUserTrackingMode(.follow, animated: true)
-    
-    //Search Section
-//        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable")
-//    resultSearchController = UISearchController(searchResultsController: locationSearchTable)
-//        resultSearchController?.searchResultsUpdater = locationSearchTable as! UISearchResultsUpdating
-//    let searchBar = resultSearchController!.searchBar
-//        searchBar.sizeToFit()
-//        searchBar.placeholder = "Search for places"
-//        navigationItem.searchController = resultSearchController
-//        definesPresentationContext = true
-//        locationSearchTable.mapView = mapView
+        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
+        
+        navigationItem.titleView = resultSearchController?.searchBar
+        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+        resultSearchController?.searchResultsUpdater = locationSearchTable
+        
+        let searchBar = resultSearchController!.searchBar
+        searchBar.sizeToFit()
+        searchBar.placeholder = "Search for places"
+        navigationItem.titleView = resultSearchController?.searchBar
+        searchBar.sizeToFit()
+        searchBar.placeholder = "Search for places"
+
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        definesPresentationContext = true
+        
+        locationSearchTable.mapView = mapView
+        locationSearchTable.handleMapSearchDelegate = self
       }
 //    var resultSearchController:UISearchController? = nil
     
@@ -196,13 +208,14 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
 }
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation { return nil }
-
+        
+      
         if let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "") {
             annotationView.annotation = annotation
             
             return annotationView
         } else {
-            let annotationView = MKPinAnnotationView(annotation:annotation, reuseIdentifier:"")
+            let annotationView = MKPinAnnotationView(annotation:annotation, reuseIdentifier: "")
             annotationView.isEnabled = true
             annotationView.canShowCallout = true
            
@@ -238,4 +251,29 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
         }
         
     }
+    
+    
 }
+
+extension ViewController: HandleMapSearch {
+    
+    func dropPinZoomIn(_ placemark: MKPlacemark) {
+        // cache the pin
+        selectedPin = placemark
+        // clear existing pins
+        mapView.removeAnnotations(mapView.annotations)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = placemark.coordinate
+        annotation.title = placemark.name
+        if let city = placemark.locality, let state = placemark.administrativeArea {
+            annotation.subtitle = "\(city) \(state)"
+        }
+        mapView.addAnnotation(annotation)
+        let span = MKCoordinateSpan(latitudeDelta: 0.20, longitudeDelta: 0.20)
+        let region = MKCoordinateRegion(center: placemark.coordinate, span: span)
+        mapView.setRegion(region, animated: true)
+        IzmirTramPinsDraw()
+        IzmirBisimPinsDraw()
+    }
+}
+

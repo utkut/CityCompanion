@@ -18,8 +18,23 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yoa-AH-LL7">
                                 <rect key="frame" x="0.0" y="87" width="414" height="763"/>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KG6-x2-Tjw">
+                                <rect key="frame" x="188" y="108" width="206" height="31"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6g3-G8-dP7"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="mapTypeSegmentSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="rWX-2Z-zHb"/>
+                                </connections>
+                            </segmentedControl>
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMO-9i-JIg">
-                                <rect key="frame" x="329" y="210.5" width="65" height="140"/>
+                                <rect key="frame" x="329" y="171" width="65" height="140"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Pxs-QY-ZUo">
                                         <rect key="frame" x="20" y="10" width="25" height="52"/>
@@ -45,8 +60,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Pxs-QY-ZUo" firstAttribute="centerX" secondItem="aMO-9i-JIg" secondAttribute="centerX" id="IS6-rj-op6"/>
-                                    <constraint firstItem="Pxs-QY-ZUo" firstAttribute="top" secondItem="aMO-9i-JIg" secondAttribute="top" constant="10" id="Ww7-fl-XiX"/>
+                                    <constraint firstItem="Pxs-QY-ZUo" firstAttribute="centerX" secondItem="aMO-9i-JIg" secondAttribute="centerX" id="6qe-vc-shx"/>
+                                    <constraint firstItem="Pxs-QY-ZUo" firstAttribute="top" secondItem="aMO-9i-JIg" secondAttribute="top" constant="10" id="BYm-jM-o55"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -54,53 +69,27 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KG6-x2-Tjw">
-                                <rect key="frame" x="188" y="150.5" width="206" height="31"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="hRu-Of-8ph"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Normal"/>
-                                    <segment title="Satellite"/>
-                                    <segment title="Hybrid"/>
-                                </segments>
-                                <connections>
-                                    <action selector="mapTypeSegmentSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="rWX-2Z-zHb"/>
-                                </connections>
-                            </segmentedControl>
-                            <searchBar hidden="YES" contentMode="redraw" placeholder="Search for a place to go!" translatesAutoresizingMaskIntoConstraints="NO" id="mtp-C1-tG3">
-                                <rect key="frame" x="0.0" y="87" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="SkZ-W4-Jyz"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="mtp-C1-tG3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-1" id="1eY-eb-PkF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aMO-9i-JIg" secondAttribute="bottom" constant="511.5" id="9Fw-Ue-Nbe"/>
-                            <constraint firstItem="mtp-C1-tG3" firstAttribute="trailing" secondItem="yoa-AH-LL7" secondAttribute="trailing" id="Aeh-3B-WeB"/>
-                            <constraint firstItem="yoa-AH-LL7" firstAttribute="leading" secondItem="mtp-C1-tG3" secondAttribute="leading" id="DKs-aD-ypb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yoa-AH-LL7" secondAttribute="bottom" constant="12" id="FHC-OU-qoR"/>
-                            <constraint firstItem="KG6-x2-Tjw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="SeQ-ff-ATk"/>
-                            <constraint firstItem="yoa-AH-LL7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XMA-23-pZo"/>
-                            <constraint firstItem="KG6-x2-Tjw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="188" id="edX-XJ-Bxe"/>
-                            <constraint firstItem="aMO-9i-JIg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="329" id="mCq-8h-Ivb"/>
-                            <constraint firstItem="mtp-C1-tG3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pjD-wY-1Eu"/>
-                            <constraint firstItem="KG6-x2-Tjw" firstAttribute="trailing" secondItem="aMO-9i-JIg" secondAttribute="trailing" id="v1e-IC-6qG"/>
-                            <constraint firstItem="mtp-C1-tG3" firstAttribute="top" secondItem="yoa-AH-LL7" secondAttribute="top" id="ve1-Ye-9ku"/>
-                            <constraint firstItem="KG6-x2-Tjw" firstAttribute="top" secondItem="mtp-C1-tG3" secondAttribute="bottom" constant="19.5" id="vzp-dW-vSt"/>
-                            <constraint firstItem="aMO-9i-JIg" firstAttribute="top" secondItem="KG6-x2-Tjw" secondAttribute="bottom" constant="30" id="xWu-Tt-mVz"/>
+                            <constraint firstItem="yoa-AH-LL7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9yO-8c-qzo"/>
+                            <constraint firstItem="yoa-AH-LL7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DBD-Mp-H8n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aMO-9i-JIg" secondAttribute="bottom" constant="551" id="IIc-O6-IOK"/>
+                            <constraint firstItem="KG6-x2-Tjw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="JVB-Lj-5YM"/>
+                            <constraint firstItem="KG6-x2-Tjw" firstAttribute="trailing" secondItem="aMO-9i-JIg" secondAttribute="trailing" id="Lns-vk-g1a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yoa-AH-LL7" secondAttribute="bottom" constant="12" id="NCf-jW-rAP"/>
+                            <constraint firstItem="yoa-AH-LL7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-1" id="QJd-LN-CLD"/>
+                            <constraint firstItem="aMO-9i-JIg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="329" id="WCH-Yc-If4"/>
+                            <constraint firstItem="KG6-x2-Tjw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="am7-Xm-f8e"/>
+                            <constraint firstItem="KG6-x2-Tjw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="188" id="czf-OP-4Gd"/>
+                            <constraint firstItem="aMO-9i-JIg" firstAttribute="top" secondItem="KG6-x2-Tjw" secondAttribute="bottom" constant="33" id="jSE-5O-iWH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="ihN-MU-Is2"/>
+                    <navigationItem key="navigationItem" id="ihN-MU-Is2"/>
                     <connections>
                         <outlet property="mapType" destination="KG6-x2-Tjw" id="BPf-3d-WA6"/>
                         <outlet property="mapView" destination="yoa-AH-LL7" id="A0J-fJ-SSr"/>
-                        <outlet property="searchBar" destination="mtp-C1-tG3" id="nfL-r3-ifH"/>
                         <segue destination="Zej-qU-0cM" kind="show" identifier="moreDetail" id="8Ue-KW-vEE"/>
                         <segue destination="P3I-1W-CP4" kind="show" identifier="LocationSearchTable" id="4lE-ik-P2P"/>
                     </connections>
@@ -117,7 +106,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="VXG-Cd-kXk" detailTextLabel="h6L-ax-7vA" style="IBUITableViewCellStyleSubtitle" id="o7Q-Q4-nBF">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultCell" textLabel="VXG-Cd-kXk" detailTextLabel="h6L-ax-7vA" style="IBUITableViewCellStyleSubtitle" id="o7Q-Q4-nBF">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o7Q-Q4-nBF" id="BwL-BT-wlT">
@@ -148,6 +137,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="nvs-Ui-v6h"/>
+                    <connections>
+                        <outlet property="tableView" destination="RTr-5d-3Zp" id="rUu-ks-djm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHW-rz-L9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
