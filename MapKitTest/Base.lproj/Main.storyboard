@@ -300,7 +300,18 @@ not have a commercial purpose.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gJF-qS-rco"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xFI-zv-fPm"/>
+                    <navigationItem key="navigationItem" id="xFI-zv-fPm">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="xMM-pD-Hlm">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vql-17-BUP">
+                                <rect key="frame" x="296" y="7" width="98" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Get Directions"/>
+                            </button>
+                            <connections>
+                                <action selector="getDirectionsTo:" destination="Zej-qU-0cM" id="qhB-Sr-3MG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emptyBikeImageView" destination="7Px-DM-lWP" id="8ON-GJ-LpI"/>
                         <outlet property="etaLabel" destination="PRh-bN-quY" id="lY8-V0-0lk"/>

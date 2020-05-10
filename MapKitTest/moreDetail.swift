@@ -94,6 +94,9 @@ class moreDetail : UIViewController {
     @IBOutlet weak var emptyBikeImageView: UIImageView!
     @IBOutlet weak var freeBikeImageView: UIImageView!
     
+    @IBAction func getDirectionsTo(_ sender: UIBarButtonItem) {
+        ViewController().getDirections()
+    }
     
     var incomingStationName: String?
     var incomingStationType: String?
@@ -208,6 +211,7 @@ func getTramFrequency() {
         statusImageView.isHidden = true
         emptyBikeImageView.isHidden = true
         statusImageView.isHidden = true
+       
     }
     
     

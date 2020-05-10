@@ -52,34 +52,36 @@ class ViewController: UIViewController, UISearchBarDelegate{
     locationManager.startUpdatingLocation()
     IzmirTramPinsDraw()
     IzmirBisimPinsDraw()
+  
+    guard let coordinate = locationManager.location?.coordinate else {return}
+        let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: 0.01, longitudinalMeters: 0.01)
+    mapView.setRegion(coordinateRegion, animated: true)
     mapView.setUserTrackingMode(.follow, animated: true)
+        //Search Section
         let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
-        
         navigationItem.titleView = resultSearchController?.searchBar
         resultSearchController = UISearchController(searchResultsController: locationSearchTable)
         resultSearchController?.searchResultsUpdater = locationSearchTable
-        
         let searchBar = resultSearchController!.searchBar
         searchBar.sizeToFit()
         searchBar.placeholder = "Search for places"
         navigationItem.titleView = resultSearchController?.searchBar
         searchBar.sizeToFit()
-        searchBar.placeholder = "Search for places"
-
         resultSearchController?.hidesNavigationBarDuringPresentation = false
         definesPresentationContext = true
-        
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
       }
-    @objc func getDirections() {
-          if let selectedPin = selectedPin {
-              let mapItem = MKMapItem(placemark: selectedPin)
-              let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-              mapItem.openInMaps(launchOptions: launchOptions)
-          }
-      }
-
+  
+    func getDirections() {
+            print("getting directions...")
+        if let selectedPin = selectedPin {
+                
+                let mapItem = MKMapItem(placemark: selectedPin)
+                let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+                mapItem.openInMaps(launchOptions: launchOptions)
+            }
+        }
     
     //MARK: - Coordinate Variables
     fileprivate let locationManager : CLLocationManager = CLLocationManager ()
@@ -145,6 +147,12 @@ class ViewController: UIViewController, UISearchBarDelegate{
         setPinUsingMKPointAnnotation(name: "Bostanli Iskele", subtitle: "Bisim", locationname: BostanliIskBisim)
         
     }
+    
+    func userUnclicked() {
+           mapView.removeAnnotations(mapView.annotations)
+           IzmirBisimPinsDraw()
+           IzmirTramPinsDraw()
+       }
 
     // MARK: - showRouteOnMap
 
@@ -222,15 +230,20 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
             
             return annotationView
         } else {
-            let annotationView = MKPinAnnotationView(annotation:annotation, reuseIdentifier: "")
+            let annotationView = MKMarkerAnnotationView(annotation:annotation, reuseIdentifier: "")
             annotationView.isEnabled = true
             annotationView.canShowCallout = true
-           
+            
             if annotation.subtitle == "Bisim" {
-                annotationView.pinTintColor = .systemBlue
+                annotationView.markerTintColor = .systemBlue
+                annotationView.glyphImage = UIImage(named: "bike")
             }
             if annotation.subtitle == "Tramvay Istasyonu" {
-                annotationView.pinTintColor = .systemGreen
+                annotationView.markerTintColor = .systemGreen
+                annotationView.glyphImage = UIImage(named: "tram")
+            }
+            if annotation.subtitle == "Search"  {
+                annotationView.glyphImage = UIImage(systemName:"magnifyingglass" )
             }
             let btn = UIButton(type: .detailDisclosure)
             annotationView.rightCalloutAccessoryView = btn
@@ -274,16 +287,12 @@ extension ViewController: HandleMapSearch {
         let annotation = MKPointAnnotation()
         annotation.coordinate = placemark.coordinate
         annotation.title = placemark.name
-        if let city = placemark.locality, let state = placemark.administrativeArea {
-            annotation.subtitle = "\(city) \(state)"
-        }
+        annotation.subtitle = "Search"
         mapView.addAnnotation(annotation)
         let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: placemark.coordinate, span: span)
         mapView.setRegion(region, animated: true)
-        let button = UIButton(type: UIButton.ButtonType.detailDisclosure)
-        button.addTarget(self, action: #selector(ViewController.getDirections), for: .touchUpInside)
-
+        
     }
 }
 
