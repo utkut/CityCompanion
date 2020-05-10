@@ -103,6 +103,10 @@ class moreDetail : UIViewController {
         stationName.text = incomingStationName
         stationType.text = incomingStationType
         getTramFrequency()
+        stationName.sizeToFit()
+        stationName.adjustsFontSizeToFitWidth = true
+        stationName.lineBreakMode = .byWordWrapping
+        stationType.sizeToFit()
         
     }
     
@@ -197,7 +201,14 @@ func getTramFrequency() {
             getBikeData(stationName: "Bostanlı iskele ")
         }
     }
-    
+    else{
+        firstCellLabel.isHidden = true
+        secondCellLabel.isHidden = true
+        etaLabel.isHidden = true
+        statusImageView.isHidden = true
+        emptyBikeImageView.isHidden = true
+        statusImageView.isHidden = true
+    }
     
     
 }

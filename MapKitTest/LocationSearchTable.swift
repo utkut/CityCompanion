@@ -32,10 +32,10 @@ extension LocationSearchTable: UISearchResultsUpdating {
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = searchBarText
         request.region = mapView.region
+        request.pointOfInterestFilter = .includingAll
         let search = MKLocalSearch(request: request)
         search.start {[weak self] (response, _) in
             guard let response = response else { return }
-            
             self?.matchingItems = response.mapItems
             self?.tableView.reloadData()
         }

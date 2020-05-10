@@ -72,7 +72,14 @@ class ViewController: UIViewController, UISearchBarDelegate{
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
       }
-//    var resultSearchController:UISearchController? = nil
+    @objc func getDirections() {
+          if let selectedPin = selectedPin {
+              let mapItem = MKMapItem(placemark: selectedPin)
+              let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+              mapItem.openInMaps(launchOptions: launchOptions)
+          }
+      }
+
     
     //MARK: - Coordinate Variables
     fileprivate let locationManager : CLLocationManager = CLLocationManager ()
@@ -222,7 +229,9 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
             if annotation.subtitle == "Bisim" {
                 annotationView.pinTintColor = .systemBlue
             }
-            
+            if annotation.subtitle == "Tramvay Istasyonu" {
+                annotationView.pinTintColor = .systemGreen
+            }
             let btn = UIButton(type: .detailDisclosure)
             annotationView.rightCalloutAccessoryView = btn
             return annotationView
@@ -261,7 +270,7 @@ extension ViewController: HandleMapSearch {
         // cache the pin
         selectedPin = placemark
         // clear existing pins
-        mapView.removeAnnotations(mapView.annotations)
+//        mapView.removeAnnotations(mapView.annotations)
         let annotation = MKPointAnnotation()
         annotation.coordinate = placemark.coordinate
         annotation.title = placemark.name
@@ -269,11 +278,12 @@ extension ViewController: HandleMapSearch {
             annotation.subtitle = "\(city) \(state)"
         }
         mapView.addAnnotation(annotation)
-        let span = MKCoordinateSpan(latitudeDelta: 0.20, longitudeDelta: 0.20)
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: placemark.coordinate, span: span)
         mapView.setRegion(region, animated: true)
-        IzmirTramPinsDraw()
-        IzmirBisimPinsDraw()
+        let button = UIButton(type: UIButton.ButtonType.detailDisclosure)
+        button.addTarget(self, action: #selector(ViewController.getDirections), for: .touchUpInside)
+
     }
 }
 
