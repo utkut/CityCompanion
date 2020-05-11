@@ -19,7 +19,7 @@ protocol HandleMapSearch {
 
 class ViewController: UIViewController, UISearchBarDelegate{
 
-    var selectedPin: MKPlacemark? = nil
+    var selectedPin: MKPlacemark?
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapType: UISegmentedControl!
     @IBAction func infoButtonClicked(_ sender: Any) {
@@ -73,7 +73,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
         locationSearchTable.handleMapSearchDelegate = self
       }
     
-    //MARK: - Coordinate Variables
+    // MARK: - Coordinate Variables
     fileprivate let locationManager : CLLocationManager = CLLocationManager ()
     let BostanliIsk = CLLocationCoordinate2D(latitude: 38.454609 , longitude: 27.098283)
     let CarsiIzban = CLLocationCoordinate2D(latitude:38.458105 , longitude: 27.094387)
@@ -137,7 +137,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
        mapView.addAnnotation(annotation)
     }
     
-    //MARK: - Izmir Tram Stop Pins
+    // MARK: - Izmir Tram Stop Pins
     func IzmirTramPinsDraw(){
         setPinUsingMKPointAnnotation(name: "Bostanli", subtitle: "Tramvay Istasyonu", locationname: BostanliIsk)
         setPinUsingMKPointAnnotation(name: "Carsi", subtitle: "Tramvay Istasyonu", locationname: CarsiIzban )
