@@ -178,13 +178,13 @@ func getTramFrequency() {
         secondCellLabel.isHidden = false
         timestamp()
         
-        if (incomingStationName == "Mavisehir"){
+        if (incomingStationName == "Mavişehir"){
             getBikeData(stationName: "Mavişehir")
         }
-        if (incomingStationName == "Balikci Barinagi"){
+        if (incomingStationName == "Balıkçı Barinağı"){
             getBikeData(stationName: "Mavişehir Balıkçı Barınağı")
         }
-        if (incomingStationName == "Karşıyaka Iskele"){
+        if (incomingStationName == "Karşıyaka İskele"){
             getBikeData(stationName: "Karşıyaka iskele")
         }
         if(incomingStationName == "Mavi Bahçe"){
@@ -202,9 +202,109 @@ func getTramFrequency() {
         if (incomingStationName == "Churchill") {
             getBikeData(stationName: "Bostanlı Odağı")
         }
-        if incomingStationName == "Bostanli Iskele" {
+        if incomingStationName == "Bostanlı İskele" {
             getBikeData(stationName: "Bostanlı iskele ")
         }
+        if incomingStationName == "İnciralti Rekreasyon Alanı" {
+            getBikeData(stationName: "İnciraltı Rekreasyon Alanı")
+        }
+        if incomingStationName == "Sahilevleri 1" {
+            getBikeData(stationName: "Sahilevleri 1")
+        }
+        if incomingStationName == "Sahilevleri 2"{
+            getBikeData(stationName: "Sahilevleri 2")
+        }
+        if incomingStationName == "İnciralti Kent Ormanı"{
+            getBikeData(stationName: "İnciraltı Kent Ormanı")
+        }
+        if incomingStationName == "Üçkuyular İskele"{
+            getBikeData(stationName: "Üçkuyular İskelesi")
+        }
+        if incomingStationName == "Adnan Saygun" {
+            getBikeData(stationName: "A.A Saygun")
+        }
+        if incomingStationName == "Göztepe Koprü" {
+            getBikeData(stationName: "Göztepe Köprü")
+        }
+        if incomingStationName == "Susuzdede" {
+            getBikeData(stationName: "Susuzdede")
+        }
+        if incomingStationName == "Köprü" {
+            getBikeData(stationName: "Köprü")
+        }
+        if incomingStationName == "Karantina" {
+            getBikeData(stationName: "Karantina")
+        }
+        if incomingStationName == "Karataş"{
+            getBikeData(stationName: "Karataş")
+        }
+        if incomingStationName == "Konak İskele" {
+            getBikeData(stationName: "Konak İskele")
+        }
+        if incomingStationName == "Konak Metro" {
+            getBikeData(stationName: "Konak Metro")
+        }
+        if incomingStationName == "Pasaport İskele" {
+            getBikeData(stationName: "Pasaport İskele")
+        }
+        if incomingStationName == "Vasıf Çınar" {
+            getBikeData(stationName: "Vasıf Çınar")
+        }
+        if incomingStationName == "Ali Çetinkaya" {
+            getBikeData(stationName: "Ali Çetinkaya Bulvarı")
+        }
+        if incomingStationName == "Alsancak İskele" {
+            getBikeData(stationName: "Alsancak İskele")
+        }
+        if incomingStationName == "Konak Metro" {
+            getBikeData(stationName: "Konak Metro")
+        }
+        if incomingStationName == "Pasaport İskele" {
+            getBikeData(stationName: "Pasaport İskele")
+        }
+        if incomingStationName == "Alsancak Limanı" {
+            getBikeData(stationName: "Liman")
+        }
+        if incomingStationName == "Meles Rekreasyon Alanı" {
+            getBikeData(stationName: "Meles Rekreasyon Alanı")
+        }
+        if incomingStationName == "Buzpisti 1" {
+            getBikeData(stationName: "Buz Pisti 1")
+        }
+        if incomingStationName == "Buzpisti 2" {
+            getBikeData(stationName: "Buz Pisti 2")
+        }
+        if incomingStationName == "Bayraklı İskele" {
+            getBikeData(stationName: "Bayraklı İskele")
+        }
+        if incomingStationName == "Bayraklı Nikah Salonu" {
+            getBikeData(stationName: "Bayraklı Nikah Salonu")
+        }
+        if incomingStationName == "Turan İstasyonu" {
+            getBikeData(stationName: "İzban Turan İstasyonu")
+        }
+        if incomingStationName == "Kuş Cenneti" {
+            getBikeData(stationName: "Kuş Cenneti")
+        }
+        if incomingStationName == "Doğal Yaşam Parkı" {
+            getBikeData(stationName: "Doğal Yaşam Parkı")
+        }
+        if incomingStationName == "Alaybey Tershane" {
+            getBikeData(stationName: "Alaybey Tershane")
+        }
+        if incomingStationName == "Fuar Basmane" {
+            getBikeData(stationName: "Fuar Basmane")
+        }
+        if incomingStationName == "Fuar Montrö" {
+            getBikeData(stationName: "Fuar Montrö")
+        }
+        
+        
+        
+        
+        
+        
+        
     }
     else{
         firstCellLabel.isHidden = true
