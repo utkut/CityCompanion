@@ -2,6 +2,11 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/utkut/mapkittest/badge)](https://www.codefactor.io/repository/github/utkut/mapkittest)
 
+![alt text](https://github.com/utkut/MapKitTest/blob/master/Images/ss1.png?raw=true)
+![alt text](https://github.com/utkut/MapKitTest/blob/master/Images/ss2.png?raw=true)
+![alt text](https://github.com/utkut/MapKitTest/blob/master/Images/ss3.png?raw=true)
+![alt text](https://github.com/utkut/MapKitTest/blob/master/Images/ss4.png?raw=true)
+
 This is an example app for iOS MapKit that practices annotations, routes, and other map capabilities. It is built for the city of Izmir, Turkey to mark several Tram stations and Bike Stations.
 
 The app fetches the data from https://http://api.citybik.es/v2/ and decodes from JSON format. Shows available bikes, bike slots and status data.
