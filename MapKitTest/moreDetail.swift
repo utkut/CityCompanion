@@ -12,7 +12,7 @@
 
 import Foundation
 import UIKit
-
+import MapKit
 class moreDetail : UIViewController {
     
     struct Stations: Codable {
@@ -84,6 +84,7 @@ class moreDetail : UIViewController {
         
     }
 
+
     @IBOutlet weak var timestampLabel: UILabel!
     @IBOutlet weak var firstCellLabel: UILabel!
     @IBOutlet weak var secondCellLabel: UILabel!
@@ -94,12 +95,13 @@ class moreDetail : UIViewController {
     @IBOutlet weak var emptyBikeImageView: UIImageView!
     @IBOutlet weak var freeBikeImageView: UIImageView!
     
-    @IBAction func getDirectionsTo(_ sender: UIBarButtonItem) {
-        ViewController().getDirections()
+    @IBAction func getDirectionsClicked(_ sender: Any) {
+       getDirections()
     }
     
     var incomingStationName: String?
     var incomingStationType: String?
+    var incomingCoordinate: CLLocationCoordinate2D?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -211,7 +213,8 @@ func getTramFrequency() {
         statusImageView.isHidden = true
         emptyBikeImageView.isHidden = true
         statusImageView.isHidden = true
-       
+        timestampLabel.isHidden = true
+
     }
     
     
@@ -224,6 +227,20 @@ func getTramFrequency() {
         let timestamp = String(timeinhms)
         self.timestampLabel.text! = timestamp
     }
+    
+    func getDirections() {
+    print("getting directions...")
+        if let coordinate = incomingCoordinate {
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: nil)
+        let region = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.02))
+        let mapItem = MKMapItem(placemark: placemark)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: region.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: region.span)]
+        mapItem.name = incomingStationName
+        mapItem.openInMaps(launchOptions: options)
+        }
+        }
     
     func getBikeData(stationName:String){
 

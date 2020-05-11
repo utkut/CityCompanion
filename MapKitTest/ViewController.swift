@@ -19,7 +19,7 @@ protocol HandleMapSearch {
 
 class ViewController: UIViewController, UISearchBarDelegate{
 
-    var selectedPin: MKPlacemark?
+    var selectedPin: MKPlacemark? = nil
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapType: UISegmentedControl!
     @IBAction func infoButtonClicked(_ sender: Any) {
@@ -72,16 +72,6 @@ class ViewController: UIViewController, UISearchBarDelegate{
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
       }
-  
-    func getDirections() {
-            print("getting directions...")
-        if let selectedPin = selectedPin {
-                
-                let mapItem = MKMapItem(placemark: selectedPin)
-                let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-                mapItem.openInMaps(launchOptions: launchOptions)
-            }
-        }
     
     //MARK: - Coordinate Variables
     fileprivate let locationManager : CLLocationManager = CLLocationManager ()
@@ -267,7 +257,7 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
                     let SecondVC = segue.destination as! moreDetail
                     SecondVC.incomingStationName = annotation.title
                     SecondVC.incomingStationType = annotation.subtitle
-                    
+                    SecondVC.incomingCoordinate  = annotation.coordinate
                 }
             }
         }
