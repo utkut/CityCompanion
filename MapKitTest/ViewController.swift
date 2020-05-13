@@ -23,7 +23,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapType: UISegmentedControl!
     @IBAction func infoButtonClicked(_ sender: Any) {
-        self.performSegue(withIdentifier: "infoViewControllerSegue", sender: (Any).self)
+        self.performSegue(withIdentifier: "SettingsViewControllerSegue", sender: (Any).self)
     }
     @IBAction func mapTypeSegmentSelected(_ sender: Any)
     {

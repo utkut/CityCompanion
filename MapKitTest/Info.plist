@@ -27,7 +27,7 @@
 	<key>NSLocationUsageDescription</key>
 	<string>MapKit Test Requires Location Data.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>MapKit Test requires location data to Understand your location.</string>
+	<string>MapKit Test requires your current location to show you what bike stations and tram stations are around you.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

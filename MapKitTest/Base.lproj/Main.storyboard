@@ -22,12 +22,11 @@
                                 <rect key="frame" x="320.66666666666669" y="118" width="25" height="62"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="9vU-9O-T6a">
-                                        <rect key="frame" x="2.6666666666666288" y="0.0" width="19.666666666666668" height="22"/>
+                                        <rect key="frame" x="1.6666666666666288" y="0.0" width="21.666666666666668" height="22"/>
                                         <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <state key="normal" image="info.circle" catalog="system"/>
+                                        <state key="normal" image="gear" catalog="system"/>
                                         <connections>
                                             <action selector="infoButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZF-9O-GdD"/>
-                                            <segue destination="ZGI-l7-jWU" kind="showDetail" identifier="infoViewControllerSegue" id="NG5-GI-ylo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4K-tk-t8b">
@@ -79,11 +78,12 @@
                         <outlet property="mapView" destination="yoa-AH-LL7" id="A0J-fJ-SSr"/>
                         <segue destination="Zej-qU-0cM" kind="show" identifier="moreDetail" id="8Ue-KW-vEE"/>
                         <segue destination="P3I-1W-CP4" kind="show" identifier="LocationSearchTable" id="4lE-ik-P2P"/>
+                        <segue destination="KyM-hX-rmF" kind="show" identifier="SettingsViewControllerSegue" id="WeT-dN-6sj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118.84057971014494" y="136.60714285714286"/>
+            <point key="canvasLocation" x="105" y="136"/>
         </scene>
         <!--Location Search Table-->
         <scene sceneID="fdh-h6-FDt">
@@ -131,6 +131,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHW-rz-L9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1025" y="842"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="NXK-cp-Ld7">
+            <objects>
+                <viewController id="KyM-hX-rmF" customClass="SettingsViewController" customModule="MapKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LnZ-vy-m5O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYa-h2-H1n">
+                                <rect key="frame" x="0.0" y="171" width="375" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wF4-VO-sFs">
+                                <rect key="frame" x="51" y="395" width="273" height="43"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="ttR-f8-cNa"/>
+                                </constraints>
+                                <state key="normal" title="Set City">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="setCityButtonClicked:" destination="KyM-hX-rmF" eventType="touchUpInside" id="xYg-Cg-8yh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wi-ht-8tD">
+                                <rect key="frame" x="134" y="748" width="106" height="30"/>
+                                <state key="normal" title="About This App"/>
+                                <connections>
+                                    <segue destination="ZGI-l7-jWU" kind="showDetail" id="5g8-3O-jhv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Select a Home City:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irv-JR-nBW">
+                                <rect key="frame" x="16" y="142" width="206" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="irv-JR-nBW" firstAttribute="leading" secondItem="LnZ-vy-m5O" secondAttribute="leadingMargin" id="3l1-r2-n0t"/>
+                            <constraint firstItem="6wi-ht-8tD" firstAttribute="leading" secondItem="He5-yI-oFV" secondAttribute="leading" constant="134" id="95w-XC-Zev"/>
+                            <constraint firstItem="irv-JR-nBW" firstAttribute="top" secondItem="He5-yI-oFV" secondAttribute="top" constant="54" id="IsJ-sH-rsU"/>
+                            <constraint firstItem="wYa-h2-H1n" firstAttribute="top" secondItem="irv-JR-nBW" secondAttribute="bottom" constant="8" id="J34-MD-SBD"/>
+                            <constraint firstItem="6wi-ht-8tD" firstAttribute="centerX" secondItem="LnZ-vy-m5O" secondAttribute="centerX" id="MyB-Ef-nlN"/>
+                            <constraint firstItem="wF4-VO-sFs" firstAttribute="centerX" secondItem="6wi-ht-8tD" secondAttribute="centerX" id="goW-4o-dVb"/>
+                            <constraint firstItem="wYa-h2-H1n" firstAttribute="centerX" secondItem="wF4-VO-sFs" secondAttribute="centerX" id="hYA-8J-AeR"/>
+                            <constraint firstItem="wF4-VO-sFs" firstAttribute="leading" secondItem="He5-yI-oFV" secondAttribute="leading" constant="51" id="iTQ-ic-Tj3"/>
+                            <constraint firstItem="wYa-h2-H1n" firstAttribute="leading" secondItem="He5-yI-oFV" secondAttribute="leading" id="iwG-Qj-PvG"/>
+                            <constraint firstItem="6wi-ht-8tD" firstAttribute="bottom" secondItem="He5-yI-oFV" secondAttribute="bottom" id="rVm-kq-v6U"/>
+                            <constraint firstItem="wF4-VO-sFs" firstAttribute="top" secondItem="wYa-h2-H1n" secondAttribute="bottom" constant="8" id="t9j-SR-tb6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="He5-yI-oFV"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="3Z3-db-ujr"/>
+                    <connections>
+                        <outlet property="cityPicker" destination="wYa-h2-H1n" id="zcZ-Hs-0fU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEN-UW-cmQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1025" y="-511"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="rpF-Nd-veH">
@@ -203,6 +271,7 @@ not have a commercial purpose.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZAB-NJ-Aug"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jzo-9Q-5Nk"/>
                     <connections>
                         <outlet property="label1" destination="KeX-Xh-Oeb" id="3So-aa-4Mm"/>
                         <outlet property="label2" destination="oVi-lT-UEl" id="qkL-Fx-EzP"/>
@@ -210,7 +279,7 @@ not have a commercial purpose.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZS-1P-fJT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1026" y="-516"/>
+            <point key="canvasLocation" x="1924" y="-511"/>
         </scene>
         <!--moreDetail-->
         <scene sceneID="fhX-5O-1rE">
@@ -332,7 +401,7 @@ not have a commercial purpose.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cta-bT-VpB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1024.6376811594205" y="144.64285714285714"/>
+            <point key="canvasLocation" x="1025" y="136"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cvh-Uu-ckt">
@@ -354,7 +423,7 @@ not have a commercial purpose.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <image name="location" catalog="system" width="128" height="115"/>
     </resources>
 </document>

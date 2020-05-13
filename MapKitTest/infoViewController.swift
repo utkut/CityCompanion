@@ -9,9 +9,11 @@
 //  Does not infringe any conflict of interest with Apple Business Conduct 2020.
 //
 //
+
 import Foundation
 import UIKit
 import SafariServices
+
 class infoViewController: UIViewController {
     
     override func viewDidLoad() {
