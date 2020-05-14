@@ -16,15 +16,9 @@ import MapKit
 protocol HandleMapSearch {
     func dropPinZoomIn(_ placemark: MKPlacemark)
 }
-var incomingData = 0
 
-class ViewController: UIViewController, UISearchBarDelegate, SettingsViewControllerDelegate {
+class ViewController: UIViewController, UISearchBarDelegate {
    
-    func SendDataToViewController(info: Int) {
-        incomingData = info
-        
-    }
-    
     var selectedPin: MKPlacemark?
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapType: UISegmentedControl!
@@ -75,7 +69,6 @@ class ViewController: UIViewController, UISearchBarDelegate, SettingsViewControl
         definesPresentationContext = true
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
-        SendDataToViewController(info: incomingData)
       }
     
     // MARK: - Coordinate Variables
@@ -202,20 +195,20 @@ class ViewController: UIViewController, UISearchBarDelegate, SettingsViewControl
         setPinUsingMKPointAnnotation(name: "Fuar Basmane", subtitle: "Bisim", locationname: FuarBasmane)
         setPinUsingMKPointAnnotation(name: "Fuar Montrö", subtitle: "Bisim", locationname: FuarMontro)
     }
-    func determineCity(){
-        print(incomingData)
-        switch incomingData {
-        case 0:
-            IzmirSelected()
-            
-            break
+    func determineCity(input: Int){
+        switch input {
         case 1:
-            print("San Francisco")
-        let annotations = self.mapView.annotations
-        self.mapView.removeAnnotations(annotations)
-            
+            clearMap()
+            IzmirSelected()
+        case 2:
+        print("San Francisco")
+        clearMap()
+        break
+        case 3:
+        clearMap()
+        print("Other")
         default:
-            print("Other")
+            break
         }
         
     }
@@ -224,7 +217,11 @@ class ViewController: UIViewController, UISearchBarDelegate, SettingsViewControl
         IzmirBisimPinsDraw()
         IzmirTramPinsDraw()
     }
-    
+    func clearMap() {
+    let annotations = self.mapView.annotations
+    self.mapView.removeAnnotations(annotations)
+    self.mapView.removeOverlays(mapView.overlays)
+    }
 
     // MARK: - showRouteOnMap
 

@@ -13,16 +13,13 @@ import Foundation
 import UIKit
 
 var citiesData = ["Izmir", "San Francisco", "Istanbul", "Ankara", "Cupertino" ]
+var selectedData:Int = 0
 
-protocol SettingsViewControllerDelegate : class {
-    func SendDataToViewController(info : Int) -> ()
-}
 
 class SettingsViewController: UIViewController {
     
-    var selectedData:Int = -1
+    
     @IBOutlet weak var cityPicker: UIPickerView!
-    weak var delegate : SettingsViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +31,12 @@ class SettingsViewController: UIViewController {
     
     
    @IBAction func setCityButtonClicked(_ sender: Any) {
-    self.delegate?.SendDataToViewController(info: selectedData)
-    let all = self.navigationController!.viewControllers
-    let vcB = all[all.count - 2] as! ViewController
-        
+//    self.delegate?.SendDataToViewController(info: )
+   var num = cityPicker.selectedRow(inComponent: 0) + 1
+   let all = self.navigationController!.viewControllers
+   let vcB = all[all.count - 2] as! ViewController
+   vcB.determineCity(input: num)
     self.navigationController?.popToRootViewController(animated: true)
-    vcB.determineCity()
     }
 
     
@@ -60,12 +57,7 @@ extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        switch component {
-        case 1:
-            selectedData = component
-        default:
-            selectedData = component
-        }
+    var num = pickerView.selectedRow(inComponent: 0) + 1
         
     }
 }
