@@ -73,12 +73,12 @@
 				6573451B2456A41B005F2A4C /* moreDetail.swift */,
 				653E29362455451B00242E49 /* ViewController.swift */,
 				653E29322455451B00242E49 /* AppDelegate.swift */,
+				652FDF5C246BF4F300024771 /* SettingsViewController.swift */,
 				653E29342455451B00242E49 /* SceneDelegate.swift */,
 				653E29382455451C00242E49 /* Main.storyboard */,
 				653E293B2455451E00242E49 /* Assets.xcassets */,
 				653E293D2455451E00242E49 /* LaunchScreen.storyboard */,
 				653E29402455451F00242E49 /* Info.plist */,
-				652FDF5C246BF4F300024771 /* SettingsViewController.swift */,
 			);
 			path = MapKitTest;
 			sourceTree = "<group>";

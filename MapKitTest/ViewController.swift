@@ -16,9 +16,15 @@ import MapKit
 protocol HandleMapSearch {
     func dropPinZoomIn(_ placemark: MKPlacemark)
 }
+var incomingData = 0
 
-class ViewController: UIViewController, UISearchBarDelegate{
-
+class ViewController: UIViewController, UISearchBarDelegate, SettingsViewControllerDelegate {
+   
+    func SendDataToViewController(info: Int) {
+        incomingData = info
+        
+    }
+    
     var selectedPin: MKPlacemark?
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapType: UISegmentedControl!
@@ -50,9 +56,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
     locationManager.desiredAccuracy = kCLLocationAccuracyBest
     locationManager.distanceFilter = kCLDistanceFilterNone
     locationManager.startUpdatingLocation()
-    IzmirTramPinsDraw()
-    IzmirBisimPinsDraw()
-  
+        
     guard let coordinate = locationManager.location?.coordinate else {return}
         let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: 0.01, longitudinalMeters: 0.01)
     mapView.setRegion(coordinateRegion, animated: true)
@@ -71,6 +75,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
         definesPresentationContext = true
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
+        SendDataToViewController(info: incomingData)
       }
     
     // MARK: - Coordinate Variables
@@ -197,12 +202,29 @@ class ViewController: UIViewController, UISearchBarDelegate{
         setPinUsingMKPointAnnotation(name: "Fuar Basmane", subtitle: "Bisim", locationname: FuarBasmane)
         setPinUsingMKPointAnnotation(name: "Fuar Montrö", subtitle: "Bisim", locationname: FuarMontro)
     }
+    func determineCity(){
+        print(incomingData)
+        switch incomingData {
+        case 0:
+            IzmirSelected()
+            
+            break
+        case 1:
+            print("San Francisco")
+        let annotations = self.mapView.annotations
+        self.mapView.removeAnnotations(annotations)
+            
+        default:
+            print("Other")
+        }
+        
+    }
     
-    func userUnclicked() {
-           mapView.removeAnnotations(mapView.annotations)
-           IzmirBisimPinsDraw()
-           IzmirTramPinsDraw()
-       }
+    func IzmirSelected()  {
+        IzmirBisimPinsDraw()
+        IzmirTramPinsDraw()
+    }
+    
 
     // MARK: - showRouteOnMap
 
@@ -253,7 +275,7 @@ class ViewController: UIViewController, UISearchBarDelegate{
             let rect = route.polyline.boundingMapRect
             self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
         }
-
+   
     // MARK: - MKMapViewDelegate
 
 }
