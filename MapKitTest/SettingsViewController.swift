@@ -57,7 +57,5 @@ extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-    var num = pickerView.selectedRow(inComponent: 0) + 1
-        
     }
 }

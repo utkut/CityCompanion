@@ -299,7 +299,10 @@ func getTramFrequency() {
             getBikeData(stationName: "Fuar Montrö")
         }
         
-        
+        if (incomingStationType == "Airport"){
+            
+            
+        }
         
         
         

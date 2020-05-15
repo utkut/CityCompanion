@@ -123,8 +123,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     let FuarBasmane = CLLocationCoordinate2D(latitude: 38.424372, longitude: 27.143219)
     let FuarLozan = CLLocationCoordinate2D(latitude: 38.42975, longitude: 27.142266)
     let FuarMontro = CLLocationCoordinate2D(latitude: 38.427879, longitude: 27.14175)
-    
-    
+    let ADBAirport = CLLocationCoordinate2D(latitude:38.297900,longitude:  27.153348)
     func setPinUsingMKPointAnnotation(name:String, subtitle: String, locationname:CLLocationCoordinate2D ){
        let annotation = MKPointAnnotation()
        annotation.coordinate = locationname
@@ -194,6 +193,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         setPinUsingMKPointAnnotation(name: "Alaybey Tershane", subtitle: "Bisim", locationname: AlaybeyTershane)
         setPinUsingMKPointAnnotation(name: "Fuar Basmane", subtitle: "Bisim", locationname: FuarBasmane)
         setPinUsingMKPointAnnotation(name: "Fuar Montrö", subtitle: "Bisim", locationname: FuarMontro)
+        setPinUsingMKPointAnnotation(name: "Adnan Menderes Airport", subtitle: "Airport", locationname: ADBAirport)
     }
     func determineCity(input: Int){
         switch input {
@@ -203,10 +203,13 @@ class ViewController: UIViewController, UISearchBarDelegate {
         case 2:
         print("San Francisco")
         clearMap()
-        break
         case 3:
-        clearMap()
         print("Other")
+        clearMap()
+        case 4:
+        break
+        case 5:
+        break
         default:
             break
         }
@@ -245,8 +248,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
             destinationAnnotation.coordinate = location.coordinate
         }
 
-//        self.mapView.showAnnotations([sourceAnnotation,destinationAnnotation], animated: true )
-
         let directionRequest = MKDirections.Request()
         directionRequest.source = sourceMapItem
         directionRequest.destination = destinationMapItem
@@ -272,11 +273,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
             let rect = route.polyline.boundingMapRect
             self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
         }
-   
-    // MARK: - MKMapViewDelegate
-
 }
- 
+   // MARK: - MKMapViewDelegate
 
 }
 extension ViewController: MKMapViewDelegate {
@@ -287,8 +285,6 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
     renderer.strokeColor = UIColor(red: 17.0/255.0, green: 147.0/255.0, blue: 255.0/255.0, alpha: 1)
     renderer.lineWidth = 5.0
     return renderer
-    
-    
 }
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation { return nil }
@@ -314,6 +310,11 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
             if annotation.subtitle == "Search"  {
                 annotationView.glyphImage = UIImage(systemName:"magnifyingglass" )
             }
+            if (annotation.subtitle == "Airport"){
+                annotationView.markerTintColor = .systemOrange
+                annotationView.glyphImage = UIImage(named: "airport")
+            }
+            
             let btn = UIButton(type: .detailDisclosure)
             annotationView.rightCalloutAccessoryView = btn
             return annotationView
@@ -327,8 +328,6 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
             }
         }
     }
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             if identifier == "moreDetail" {
@@ -342,8 +341,6 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
         }
         
     }
-    
-    
 }
 
 extension ViewController: HandleMapSearch {
