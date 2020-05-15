@@ -13,6 +13,11 @@
 import UIKit
 import MapKit
 
+struct defaultsKeys {
+    static let SelectedMainCity = "City"
+    static let keyTwo = "secondStringKey"
+}
+
 protocol HandleMapSearch {
     func dropPinZoomIn(_ placemark: MKPlacemark)
 }
@@ -45,6 +50,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view
+    let defaults = UserDefaults.standard
+    let stringOne = defaults.integer(forKey: defaultsKeys.SelectedMainCity)
+    determineCity(input: stringOne)
+    
     mapView.delegate = self
     locationManager.requestWhenInUseAuthorization()
     locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -196,19 +205,26 @@ class ViewController: UIViewController, UISearchBarDelegate {
         setPinUsingMKPointAnnotation(name: "Adnan Menderes Airport", subtitle: "Airport", locationname: ADBAirport)
     }
     func determineCity(input: Int){
+        let defaults = UserDefaults.standard
         switch input {
         case 1:
             clearMap()
+           
+            defaults.set(input, forKey: defaultsKeys.SelectedMainCity)
             IzmirSelected()
         case 2:
         print("San Francisco")
+        defaults.set(input, forKey: defaultsKeys.SelectedMainCity)
         clearMap()
         case 3:
         print("Other")
+        defaults.set(input, forKey: defaultsKeys.SelectedMainCity)
         clearMap()
         case 4:
+        defaults.set(input, forKey: defaultsKeys.SelectedMainCity)
         break
         case 5:
+        defaults.set(input, forKey: defaultsKeys.SelectedMainCity)
         break
         default:
             break
