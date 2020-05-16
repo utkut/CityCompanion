@@ -113,6 +113,15 @@ class moreDetail : UIViewController {
         stationName.lineBreakMode = .byWordWrapping
         stationType.sizeToFit()
         
+		if(incomingStationType == "Airport"){
+			let alertController = UIAlertController(title: "Alert", message: "This feature is not available yet.", preferredStyle: .alert)
+			let action1 = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+				self.navigationController?.popToRootViewController(animated: true);
+			}
+			alertController.addAction(action1)
+			self.present(alertController, animated: true, completion: nil)
+					
+		}
     }
     
 
@@ -301,7 +310,7 @@ func getTramFrequency() {
         
         if (incomingStationType == "Airport"){
             
-            
+		
         }
         
         
