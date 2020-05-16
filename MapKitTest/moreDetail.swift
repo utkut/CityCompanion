@@ -115,8 +115,8 @@ class moreDetail : UIViewController {
         
 		if(incomingStationType == "Airport"){
 			let alertController = UIAlertController(title: "Alert", message: "This feature is not available yet.", preferredStyle: .alert)
-			let action1 = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
-				self.navigationController?.popToRootViewController(animated: true);
+			let action1 = UIAlertAction(title: "OK", style: .default) { (_:UIAlertAction) in
+				self.navigationController?.popToRootViewController(animated: true)
 			}
 			alertController.addAction(action1)
 			self.present(alertController, animated: true, completion: nil)
@@ -357,7 +357,7 @@ func getTramFrequency() {
     func getBikeData(stationName:String){
 
     if let url = URL(string: "https://api.citybik.es//v2/networks/baksi-bisim"){
-   let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+   let task = URLSession.shared.dataTask(with: url) { (data, _, error) in
            guard let dataResponse = data, error == nil else {
            print(error?.localizedDescription ?? "Response Error")
            return
