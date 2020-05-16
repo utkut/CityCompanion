@@ -419,4 +419,8 @@ func getTramFrequency() {
        
     }
     
+    func getAirportData(){
+	// Work Under Progress, until a Airport arrival-departure API can be sourced.
+    }
+    
 }

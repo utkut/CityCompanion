@@ -30,7 +30,7 @@
 		653E293B2455451E00242E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		653E293E2455451E00242E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		653E29402455451F00242E49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6573451B2456A41B005F2A4C /* moreDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreDetail.swift; sourceTree = "<group>"; };
+		6573451B2456A41B005F2A4C /* moreDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moreDetail.swift; sourceTree = "<group>"; usesTabs = 1; };
 		65BE0010245552E7005A1D7E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		65CD1D5B24581B3100DDA67D /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
 		65F4A5F4246005DD00833C63 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
