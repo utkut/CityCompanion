@@ -199,6 +199,9 @@ class ViewController: UIViewController, UISearchBarDelegate {
         setPinUsingMKPointAnnotation(name: "Alaybey Tershane", subtitle: "Bisim", locationname: AlaybeyTershane)
         setPinUsingMKPointAnnotation(name: "Fuar Basmane", subtitle: "Bisim", locationname: FuarBasmane)
         setPinUsingMKPointAnnotation(name: "Fuar Montrö", subtitle: "Bisim", locationname: FuarMontro)
+        setPinUsingMKPointAnnotation(name: "Fuar Lozan", subtitle: "Bisim", locationname: FuarLozan)
+        setPinUsingMKPointAnnotation(name: "Alsancak Garı", subtitle: "Bisim", locationname: AlsancakGari)
+        
         setPinUsingMKPointAnnotation(name: "Adnan Menderes Airport", subtitle: "Airport", locationname: ADBAirport)
     }
     

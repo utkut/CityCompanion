@@ -196,6 +196,7 @@ func CompileData() {
 		firstCellLabel.isHidden = false
 		secondCellLabel.isHidden = false
 		statusImageView.isHidden = false
+		etaLabel.isHidden = false
 		emptyBikeImageView.isHidden = false
 		statusImageView.isHidden = false
 		timestampLabel.isHidden = false
@@ -255,10 +256,10 @@ func CompileData() {
 			getBikeData(stationName: "Ali Çetinkaya Bulvarı", urlinput: izmirurl)
 		case "Alsancak İskele":
 			getBikeData(stationName: "Alsancak İskele", urlinput: izmirurl)
-		case "Alsancak Gari":
-			getBikeData(stationName: "Alsancak Gari", urlinput: izmirurl)
-		case "":
-			getBikeData(stationName: "", urlinput: izmirurl)
+		case "Alsancak Garı":
+			getBikeData(stationName: "Alsancak Garı", urlinput: izmirurl)
+		case "Fuar Lozan":
+			getBikeData(stationName: "Fuar Lozan", urlinput: izmirurl)
 		case "Alsancak Limanı":
 			 getBikeData(stationName: "Liman", urlinput: izmirurl)
 		case "Meles Rekreasyon Alanı":
