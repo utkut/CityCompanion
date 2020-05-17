@@ -182,7 +182,15 @@ func CompileData() {
             }
         }
     }
-
+	else{
+		firstCellLabel.isHidden = true
+		secondCellLabel.isHidden = true
+		etaLabel.isHidden = true
+		statusImageView.isHidden = true
+		emptyBikeImageView.isHidden = true
+		statusImageView.isHidden = true
+		timestampLabel.isHidden = true
+	}
 	
     if (incomingStationType == "Bisim") {
 		firstCellLabel.isHidden = false
@@ -288,6 +296,7 @@ func CompileData() {
 			firstCellLabel.isHidden = false
 			secondCellLabel.isHidden = false
 			statusImageView.isHidden = false
+			etaLabel.isHidden = false
 			emptyBikeImageView.isHidden = false
 			statusImageView.isHidden = false
 			timestampLabel.isHidden = false
@@ -302,7 +311,7 @@ func CompileData() {
 				getBikeData(stationName: "Varyant", urlinput: url)
 			case "Ataturk Parki":
 				getBikeData(stationName: "Atatürk Parkı", urlinput: url)
-			case "Kapali Yol":
+			case "Kapalı Yol":
 				getBikeData(stationName: "Kapalı Yol", urlinput: url)
 			case "Işıklar":
 				getBikeData(stationName: "Işıklar", urlinput: url)
