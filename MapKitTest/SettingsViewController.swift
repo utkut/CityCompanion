@@ -12,7 +12,7 @@
 import Foundation
 import UIKit
 
-var citiesData = ["Izmir", "San Francisco", "Istanbul", "Ankara", "Cupertino" ]
+var citiesData = ["Izmir", "San Francisco", "Istanbul", "Ankara", "Cupertino", "Antalya" ]
 var selectedData:Int = 0
 
 
