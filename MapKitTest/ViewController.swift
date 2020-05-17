@@ -133,6 +133,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
     let FuarLozan = CLLocationCoordinate2D(latitude: 38.42975, longitude: 27.142266)
     let FuarMontro = CLLocationCoordinate2D(latitude: 38.427879, longitude: 27.14175)
     let ADBAirport = CLLocationCoordinate2D(latitude:38.297900,longitude:  27.153348)
+    
+    
     func setPinUsingMKPointAnnotation(name:String, subtitle: String, locationname:CLLocationCoordinate2D ){
        let annotation = MKPointAnnotation()
        annotation.coordinate = locationname

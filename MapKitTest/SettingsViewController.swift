@@ -32,7 +32,7 @@ class SettingsViewController: UIViewController {
     
    @IBAction func setCityButtonClicked(_ sender: Any) {
 //    self.delegate?.SendDataToViewController(info: )
-   var num = cityPicker.selectedRow(inComponent: 0) + 1
+   let num = cityPicker.selectedRow(inComponent: 0) + 1
    let all = self.navigationController!.viewControllers
    let vcB = all[all.count - 2] as! ViewController
    vcB.determineCity(input: num)
