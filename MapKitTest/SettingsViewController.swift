@@ -12,10 +12,8 @@
 import Foundation
 import UIKit
 
-var citiesData = ["Izmir", "San Francisco", "Istanbul", "Ankara", "Cupertino", "Antalya" ]
+var citiesData = ["Izmir, TR", "San Francisco, CA", "Istanbul, TR", "Ankara, TR", "Cupertino, CA", "Antalya, TR" ]
 var selectedData:Int = 0
-
-
 class SettingsViewController: UIViewController {
     
     
