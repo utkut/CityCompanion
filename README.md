@@ -64,3 +64,10 @@ V.1.0.8
 * Changed infoViewController button to SettingsViewController.
 * Changed infoViewControlle segue to SettingsViewControllerSegue
 * Changed info.plist to describe why location is needed more precisely.
+
+V.1.0.9
+
++ Added Bike Station Support for the city of Antalya.
++ Performed Code cleaning and moved the Variables under the functions to preserve memory usage.
++ Performed Code cleaning in order to simplify the CompileData() function.
+* Bugfixes.
