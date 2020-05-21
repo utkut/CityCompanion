@@ -234,9 +234,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
         clearMap()
         IzmirSelected()
         case 2:
-        print("Set Home City to San Francisco")
+        print("Set Home City to San Francisco Bay Area")
         defaults.set(input, forKey: defaultsKeys.SelectedMainCity)
         clearMap()
+        SanFranciscoDraw()
         case 3:
         print("Set Home City to Istanbul")
         defaults.set(input, forKey: defaultsKeys.SelectedMainCity)
@@ -264,6 +265,47 @@ class ViewController: UIViewController, UISearchBarDelegate {
         IzmirBisimPinsDraw()
         IzmirTramPinsDraw()
     }
+    
+    func SanFranciscoDraw(){
+        //Bike Coordinates goes here
+        let HarmonAdeline = CLLocationCoordinate2D(latitude:37.849735, longitude:-122.270582)
+        let FountainAlley = CLLocationCoordinate2D(latitude:37.783171989315306,longitude:-122.39357203245163)
+        let BryantSt = CLLocationCoordinate2D(latitude:37.322124625448566,longitude:-121.88109040260315)
+        let OakSt = CLLocationCoordinate2D(latitude:37.3236779,longitude:-121.8741186)
+        let BestorArt = CLLocationCoordinate2D(latitude:37.3236779,longitude:-121.8741186)
+        let VirginiaSt = CLLocationCoordinate2D(latitude:37.3229796,longitude:-121.887931)
+        let GrantSt = CLLocationCoordinate2D(latitude:37.3229796,longitude:-121.8879312)
+        let PierceAve = CLLocationCoordinate2D(latitude:37.3327938,longitude:-121.875926)
+        let WilliamSt = CLLocationCoordinate2D(latitude:37.3448821,longitude:-121.896965)
+        let EmpireSt = CLLocationCoordinate2D(latitude:37.3413348,longitude:-121.903182)
+        let AutumnParkway = CLLocationCoordinate2D(latitude:37.80781318217903,longitude:-122.26449608802795)
+        let SnowPark = CLLocationCoordinate2D(latitude:37.81231409135146,longitude:-122.26077854633331)
+        let BayPl = CLLocationCoordinate2D(latitude:37.8110807,longitude:-122.2432677)
+        let LakeshoreAve = CLLocationCoordinate2D(latitude:37.8088479,longitude:-122.2496799)
+        let ElEmbarcadero = CLLocationCoordinate2D(latitude:37.80889393398715,longitude:-122.25646018981932)
+        let GrandAvePerkinsSt = CLLocationCoordinate2D(latitude:37.8305452,longitude:-122.2739367)
+        let MarketSt40 = CLLocationCoordinate2D(latitude:37.8302232,longitude:-122.2709501)
+        
+        
+        setPinUsingMKPointAnnotation(name: "Harmon St at Adeline St", subtitle: "Ford GoBike", locationname: HarmonAdeline)
+        setPinUsingMKPointAnnotation(name: "Fountain Alley at S 2nd St", subtitle: "Ford GoBike", locationname: FountainAlley)
+        setPinUsingMKPointAnnotation(name: "Bryant St at 2nd St", subtitle: "Ford GoBike", locationname: BryantSt)
+        setPinUsingMKPointAnnotation(name: "Oak St at 1st St", subtitle: "Ford GoBike", locationname: OakSt)
+        setPinUsingMKPointAnnotation(name: "Bestor Art Park", subtitle: "Ford GoBike", locationname: BestorArt)
+        setPinUsingMKPointAnnotation(name: "5th St at Virginia St", subtitle: "Ford GoBike", locationname: VirginiaSt)
+        setPinUsingMKPointAnnotation(name: "Locust St at Grant St", subtitle: "Ford GoBike", locationname: GrantSt)
+        setPinUsingMKPointAnnotation(name: "Pierce Ave at Market St", subtitle: "Ford GoBike", locationname: PierceAve)
+        setPinUsingMKPointAnnotation(name: "William St at 10th St", subtitle: "Ford GoBike", locationname: WilliamSt)
+        setPinUsingMKPointAnnotation(name: "Empire St at 1st St", subtitle: "Ford GoBike", locationname: EmpireSt)
+        setPinUsingMKPointAnnotation(name: "Autumn Parkway at Coleman Ave", subtitle: "Ford GoBike", locationname: AutumnParkway)
+        setPinUsingMKPointAnnotation(name: "Snow Park", subtitle: "Ford GoBike", locationname: SnowPark)
+        setPinUsingMKPointAnnotation(name: "Bay Pl at Vernon St", subtitle: "Ford GoBike", locationname: BayPl)
+        setPinUsingMKPointAnnotation(name: "Lakeshore Ave at Trestle Glen Rd", subtitle: "Ford GoBike", locationname: LakeshoreAve)
+        setPinUsingMKPointAnnotation(name: "El Embarcadero at Grand Ave", subtitle: "Ford GoBike", locationname: ElEmbarcadero)
+        setPinUsingMKPointAnnotation(name: "Grand Ave at Perkins St", subtitle: "Ford GoBike", locationname: GrandAvePerkinsSt)
+        setPinUsingMKPointAnnotation(name: "Market St at 40th St", subtitle: "Ford GoBike", locationname: MarketSt40)
+    }
+    
     func clearMap() {
     let annotations = self.mapView.annotations
     self.mapView.removeAnnotations(annotations)
@@ -343,7 +385,7 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
             annotationView.isEnabled = true
             annotationView.canShowCallout = true
             
-            if annotation.subtitle == "Bisim" || annotation.subtitle == "ANTBIS" {
+            if annotation.subtitle == "Bisim" || annotation.subtitle == "ANTBIS" || annotation.subtitle == "Ford GoBike" {
                 annotationView.markerTintColor = .systemBlue
                 annotationView.glyphImage = UIImage(named: "bike")
             }

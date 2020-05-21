@@ -18,18 +18,20 @@ class moreDetail : UIViewController {
     struct Stations: Codable {
         let company: [String]
         let href: String
+		let gbfsHref: String?
         let id: String
         let location: LocationJson
         let name: String
         let stations: [Station]
         
-        init(company:[String] , href:String, id:String, location:LocationJson, name:String, stations:[Station] )  {
+		init(company:[String] , href:String, gbfsHref:String, id:String, location:LocationJson, name:String, stations:[Station] )  {
             self.company = company
             self.href = href
             self.id = id
             self.location = location
             self.name = name
             self.stations = stations
+			self.gbfsHref = gbfsHref
         }
 
     }
@@ -61,19 +63,21 @@ class moreDetail : UIViewController {
     struct LocationJson: Codable {
         let city: String
         let country: String
+		let address: String?
         let latitude: Double
         let longitude: Double
-        init(city: String, country:String, latitude:Double, longitude:Double) {
+		init(city: String, country:String, latitude:Double, longitude:Double, address: String?) {
             self.city = city
             self.country = country
             self.latitude = latitude
             self.longitude = longitude
+			self.address = address
         }
     }
 
     struct Extra: Codable {
-        let slots: Int
-        let status: String
+        let slots: Int?
+        let status: String?
         let uid: String
         
         init(slots:Int, status: String, uid: String) {
@@ -94,7 +98,7 @@ class moreDetail : UIViewController {
     @IBOutlet weak var statusImageView: UIImageView!
     @IBOutlet weak var emptyBikeImageView: UIImageView!
     @IBOutlet weak var freeBikeImageView: UIImageView!
-    
+
     @IBAction func getDirectionsClicked(_ sender: Any) {
        getDirections()
     }
@@ -107,11 +111,15 @@ class moreDetail : UIViewController {
         super.viewDidLoad()
         stationName.text = incomingStationName
         stationType.text = incomingStationType
+		self.title = incomingStationName
 		if incomingStationType == "Bisim"{
 			CompileIzmirBikeData()
 		}
 		if incomingStationType == "ANTBIS"{
 			CompileAntalyaBikeData()
+		}
+		if incomingStationType == "Ford GoBike"{
+			compileSanFranciscoBikes()
 		}
 		if incomingStationName == "Tramvay Istasyonu"{
 			CompileTramData()
@@ -254,11 +262,19 @@ func CompileTramData() {
                 DispatchQueue.main.async {
 //                    self.emptySlotsLabel.text = String(station.empty_slots)
 //                    self.freeBikesLabel.text = String(station.free_bikes)
-                 
+					
+					
                     self.firstCellLabel.text = "Empty Bike Slots: " + String(station.empty_slots)
                     self.secondCellLabel.text = "Free Bikes: " + String(station.free_bikes)
-                    self.etaLabel.text = "Station Status: " + station.extra.status
-//                    Status Location Icons
+					if station.extra.status != nil {
+						self.etaLabel.text = "Station Status: " + station.extra.status!
+					}
+					else{
+						self.etaLabel.text = "Station Status: Active"
+						
+						}
+					
+					//Status Location Icons
                     if (station.extra.status == "Active"){
                         self.statusImageView.image = UIImage(named: "available.png")
                         if (station.empty_slots == 0) {
@@ -274,10 +290,25 @@ func CompileTramData() {
                             self.freeBikeImageView.image = UIImage(named: "available.png")
                         }
                     }
-                    else{
+                    if (station.extra.status == "Passive"){
                         self.statusImageView.image = UIImage(named: "unavailable.png")
                     }
-                
+					
+					if (station.extra.status == nil){
+					self.statusImageView.image = UIImage(named: "available.png")
+						if (station.empty_slots == 0) {
+                            self.emptyBikeImageView.image = UIImage(named: "unavailable.png")
+                        }
+                        else{
+                            self.emptyBikeImageView.image = UIImage(named: "available.png")
+                        }
+                        if (station.free_bikes == 0){
+                            self.freeBikeImageView.image = UIImage(named: "unavailable.png")
+                        }
+                        else{
+                            self.freeBikeImageView.image = UIImage(named: "available.png")
+                        }
+					}
                 }
             
             }
@@ -401,8 +432,6 @@ func CompileTramData() {
 			default:
 				print("No Station Found.")
 			}
-			
-			
 		}
 	}
 	func CompileAntalyaBikeData() {
@@ -437,5 +466,19 @@ func CompileTramData() {
 				print("Station Not Found")
 			}
 		}
+	}
+	
+	func compileSanFranciscoBikes() {
+		firstCellLabel.isHidden = false
+		secondCellLabel.isHidden = false
+		statusImageView.isHidden = false
+		etaLabel.isHidden = false
+		emptyBikeImageView.isHidden = false
+		statusImageView.isHidden = false
+		timestampLabel.isHidden = false
+		
+		let SFUrl = "https://api.citybik.es/v2/networks/ford-gobike"
+		getBikeData(stationName: incomingStationName!, urlinput: SFUrl)
+		
 	}
 }
