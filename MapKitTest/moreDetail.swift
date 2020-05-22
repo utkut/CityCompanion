@@ -477,6 +477,9 @@ func CompileTramData() {
 		statusImageView.isHidden = false
 		timestampLabel.isHidden = false
 		
+		timestamp()
+		
+	
 		let SFUrl = "https://api.citybik.es/v2/networks/ford-gobike"
 		getBikeData(stationName: incomingStationName!, urlinput: SFUrl)
 		

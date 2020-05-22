@@ -1,0 +1,5433 @@
+{
+  "type": "FeatureCollection",
+  "name": "FordGoBike",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harmon St at Adeline St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.270582,
+          37.849735
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fountain Alley at S 2nd St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.889276504517,
+          37.3361883002906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bryant St at 2nd St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.393572032452,
+          37.7831719893153
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oak St at 1st St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.881090402603,
+          37.3221246254486
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bestor Art Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8741186,
+          37.3236779
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "5th St at Virginia St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.87712,
+          37.3259984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Locust St at Grant St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8879312,
+          37.3229796
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pierce Ave at Market St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.884559,
+          37.327581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "William St at 10th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8759263,
+          37.3327938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Empire St at 1st St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8969655,
+          37.3448821
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Autumn Parkway at Coleman Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.9031829,
+          37.3413348
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Snow Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.264496088028,
+          37.807813182179
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bay Pl at Vernon St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.260778546333,
+          37.8123140913515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lakeshore Ave at Trestle Glen Rd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2432677,
+          37.8110807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Embarcadero at Grand Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2496799,
+          37.8088479
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grand Ave at Perkins St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.256460189819,
+          37.8088939339872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Market St at 40th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2739367,
+          37.8305452
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "West St at 40th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2709501,
+          37.8302232
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grand Ave at Santa Clara Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2472152,
+          37.8127441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Pablo Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.283126711845,
+          37.855783320302
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fulton St at Ashby Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2635653615,
+          37.8555736618288
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oregon St at Adeline St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2675583,
+          37.8575672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Julian St at 6th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8888891,
+          37.3429973
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Julian St at The Alameda"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.9125165,
+          37.3322326
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Alameda at Bush St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.9048882,
+          37.3319323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Santa Clara St at 7th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8841054,
+          37.3391456
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "3rd St at Keyes St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.87627851963,
+          37.3208661458892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Carl St at Cole St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.44925737381,
+          37.7659102072239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "17th St at Valencia St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4219039,
+          37.7633158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Irwin St at 8th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3995794,
+          37.7668828
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bryant St at 15th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.410662,
+          37.7671004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "15th St at Potrero Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.407358586788,
+          37.7670785045837
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "17th St at Dolores St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4264968,
+          37.7630152
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "4th St at 16th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.390833497047,
+          37.7670445796937
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "16th St at Prosper St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4318042,
+          37.764285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Scott St at Golden Gate Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4368608,
+          37.7789994
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Raymond Kimbell Playground"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.434558868408,
+          37.7838127092781
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Francisco Caltrain (Townsend St at 4th St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.395282,
+          37.776598
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Folsom St at 3rd St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.39887,
+          37.78383
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cahill Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.904575824738,
+          37.3291186681478
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Father Alfred E Boeddeker Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.412408,
+          37.7839879
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gennessee St at Monterey Blvd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.451121509075,
+          37.7316566899845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Judson Ave at Gennessee St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.450695037842,
+          37.7282815924528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jackson St at 11th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.266438007355,
+          37.8000016311888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "13th St at Franklin St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.270579338074,
+          37.8031890811316
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Webster St at 19th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.26658821106,
+          37.8069697609559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Potrero Ave and Mariposa St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.407377362251,
+          37.763280940581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Embarcadero at Sansome St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.403234,
+          37.80477
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Folsom St at 15th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4154425,
+          37.7670373
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Valencia St at 16th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4218661,
+          37.765052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Berry St at King St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.398437559605,
+          37.7717621103132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Townsend St at 7th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.402717,
+          37.771058
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "4th St at Mission Bay Blvd S"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3911984,
+          37.7704074
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mission Bay Kids Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.393027544022,
+          37.7723006317476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sanchez St at 15th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4310597,
+          37.7662185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "14th St at Mission St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4201102,
+          37.7682646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dolores St at 15th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4266136,
+          37.7662102
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "MLK Jr Way at University Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2730677,
+          37.8717192
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bancroft Way at Telegraph Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.258764,
+          37.8688126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fruitvale Ave at International Blvd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2254,
+          37.778058
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Union St at 10th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2893702,
+          37.8072393
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Market St at 8th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.282497,
+          37.8036865
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fruitvale BART Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2244982,
+          37.7752321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "14th St at Filbert St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.283282279968,
+          37.80874983466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "MLK Jr Way at 14th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2760402,
+          37.8061628
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "29th St at Tiffany Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4214722,
+          37.7440667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Precita Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4114029,
+          37.7472996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "29th St at Church St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4268059,
+          37.7436839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Guerrero Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.422140240669,
+          37.7457387961833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cesar Chavez St at Dolores St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4249863,
+          37.7478584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Valencia St at Cesar Chavez St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4202187,
+          37.7479981
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Horton St at 40th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2876102,
+          37.8297046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Emeryville Town Hall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2856333,
+          37.8312752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Valencia St at 22nd St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4209752,
+          37.7552126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "24th St at Chattanooga St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4266139,
+          37.7518194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "22nd St at Dolores St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.425727695227,
+          37.7550002603781
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jersey St at Castro St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4339496,
+          37.750506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Valencia St at 24th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4206278,
+          37.7524278
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Garfield Square (25th St at Harrison St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4119009,
+          37.7510171
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jersey St at Church St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4274114,
+          37.7509004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Spear St at Folsom St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3904285,
+          37.7896767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Howard St at 2nd St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.398113012314,
+          37.7869282567877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "1st St at Folsom St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.39438,
+          37.78729
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Beale St at Harrison St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3918648,
+          37.7880593
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mechanics Monument Plaza (Market St at Bush St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.399051,
+          37.7913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Montgomery St BART Station (Market St at 2nd St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.400811,
+          37.7896254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Howard St at Beale St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.394643,
+          37.789756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Embarcadero at Steuart St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.391034,
+          37.791464
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Embarcadero at Bryant St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.388097923304,
+          37.7871680147466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "O'Farrell St at Divisadero St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.439445853233,
+          37.7824046019341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bird Ave at Coe Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.897832751274,
+          37.3151579299831
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parkmoor Ave at Race St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.910004615784,
+          37.3167364784934
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sunol St at San Carlos St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.905975937843,
+          37.3234513387068
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "21st St at Santa Clara St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.870678067207,
+          37.3457587953032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "10th St at Mission St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.892251074314,
+          37.3556926512464
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Raymond Bernal Jr Memorial Park (8th St at Hedding St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.895935758948,
+          37.3568343527809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Skyport Dr at Technology Dr"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.916814744473,
+          37.3652265519103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Buchanan St at North Point St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.433536946774,
+          37.8042720198515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "2100 Powell St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.298717722297,
+          37.8395430826656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lombard St at Columbus Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.413578629494,
+          37.8027461525005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jones St at Post St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.413278222084,
+          37.7873267660624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Potrero del Sol Park (25th St at Utah St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.405215501785,
+          37.7517916452566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Madison St at 17th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.262409329414,
+          37.8040367840236
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grove St at Masonic Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.446545660496,
+          37.7748362941335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Illinois St at 20th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.387539744377,
+          37.7604575554348
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sonora Ave at 1st St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.911731958389,
+          37.3640604622588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "11th St at Bryant St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4117258,
+          37.7700298
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gish Rd at 1st St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.909315288067,
+          37.3618668002592
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Metro Dr at Technology Dr"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.918794214726,
+          37.3676780524081
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kerley Dr at Rosemary St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.906834244728,
+          37.3608541552538
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "10th St at Empire St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.887618899345,
+          37.349426308788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bay St at Fillmore St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.436288893223,
+          37.802635949749
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Leavenworth St at Broadway"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.416857630014,
+          37.7964706916229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Market St at Dolores St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4268256,
+          37.7693053
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Duboce Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4338119,
+          37.7692005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Church St at Duboce Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4291557,
+          37.7700831
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Frank H Ogawa Plaza"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.271738052368,
+          37.8045623549303
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Downtown Berkeley BART"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.268422,
+          37.870139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Shattuck Ave at Hearst Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.268487215042,
+          37.8736762145983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fulton St at Bancroft Way"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2658964,
+          37.8677892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Berkeley Civic Center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.270556,
+          37.8690599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ashby BART Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2702132,
+          37.8524766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Haste St at Telegraph Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2588044,
+          37.8660431
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bancroft Way at College Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2543374,
+          37.8693603
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Telegraph Ave at Ashby Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2597949,
+          37.8559558
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Broadway at 30th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2619284,
+          37.8193814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "MacArthur Blvd at Telegraph Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2651002,
+          37.8262863
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "MacArthur BART Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.26631462574,
+          37.8284099730585
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "49th St at Telegraph Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2623663,
+          37.8359455
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Shattuck Ave at 51st St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2640037,
+          37.8368013
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Shattuck Ave at 55th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2644881,
+          37.8403643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "College Ave at Taft Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2515349,
+          37.8417999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rockridge BART Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.251900434494,
+          37.8442787539907
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Telegraph Ave at 58th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.261351,
+          37.8444927
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Telegraph Ave at 19th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2699271,
+          37.8087021
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Telegraph Ave at 23rd St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2687726,
+          37.8126783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grand Ave at Webster St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2651925,
+          37.8113768
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lakeside Dr at 14th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2626418,
+          37.8013189
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dover St at 57th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.267738,
+          37.8426295
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Genoa St at 55th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2717561,
+          37.8396488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Davis St at Jackson St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.398436,
+          37.79728
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Washington St at Kearny St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.404770255089,
+          37.7953929372545
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Commercial St at Montgomery St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.402923,
+          37.794231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Francisco Ferry Building (Harry Bridges Plaza)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.394203,
+          37.795392
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Clay St at Battery St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.39997,
+          37.795001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Embarcadero BART Station (Beale St at Market St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.397086,
+          37.792251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Post St at Kearny St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.403452,
+          37.788975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Telegraph Ave at Alcatraz Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.260172367096,
+          37.8502218744968
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Broadway at Kearny St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.405950427055,
+          37.7980136439598
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "5th St at San Salvador St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.881766319275,
+          37.3320386809513
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Union Square (Powell St at Post St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.408530712128,
+          37.7882999781508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "10th St at Fallon St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2629973,
+          37.7976728
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "2nd Ave at E 18th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.253810167313,
+          37.8002135669698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Webster St at 2nd St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.273969650269,
+          37.795194764386
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Washington St at 8th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2748943,
+          37.8007544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "55th St at Telegraph Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2618225,
+          37.8401858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Broadway at Coronado Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2516207,
+          37.8357883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "College Ave at Bryant Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2512714,
+          37.8381269
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "4th St at San Carlos St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.883850395679,
+          37.3327995238607
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "11th St at Natoma St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4160402,
+          37.7735069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "McCoppin St at Valencia St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.42242321372,
+          37.7716624622162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Market St at Franklin St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.42123901844,
+          37.7737932060887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Laguna St at Hayes St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.426244020462,
+          37.7764348192047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pierce St at Haight St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4337079,
+          37.7717933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Page St at Scott St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4356498,
+          37.772406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Broderick St at Oak St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4390777,
+          37.7730627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Central Ave at Fell St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.444292604923,
+          37.7733108788972
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "7th St at Brannan St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4036725,
+          37.7734919
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Embarcadero at Vallejo St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.398525,
+          37.799953
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mission Dolores Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4264353,
+          37.7614205
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mission Playground"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4213392,
+          37.7592103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19th St at Mission St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.418892,
+          37.760299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Folsom St at 19th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4148171,
+          37.7605936
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19th St at Florida St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.410807,
+          37.7604469
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "20th St at Bryant St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.409851,
+          37.7592005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Esprit Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3906477,
+          37.7616343
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Valencia St at 21st St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.421025,
+          37.7567083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Harrison St at 20th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.412544,
+          37.758862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Delmas Ave at Virginia St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.892999410629,
+          37.3197569599923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Auzerais Ave at Los Gatos Creek Trail"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.903089880943,
+          37.3211818342673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Park Ave at Race St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.912327408791,
+          37.3260108479408
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Octavia Blvd at Page St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.423808574677,
+          37.7740179376835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Glen Park BART Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.434140443802,
+          37.7328128005294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Balboa Park BART Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.447723150253,
+          37.7205549887206
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "17th St at Santa Clara St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.874384880066,
+          37.3439846779821
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Carlos St at Market St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.888979,
+          37.330698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Almaden Blvd at San Fernando St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8932,
+          37.331415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Jose Diridon Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.901782,
+          37.329732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Paseo De San Antonio at 2nd St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.886943,
+          37.333798
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Fernando St at 4th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.88566,
+          37.335885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Salvador St at 9th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.877349,
+          37.333955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "1st St at San Carlos St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.886937618256,
+          37.331167994222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Market St at 45th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.272968,
+          37.834174
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Santa Clara St at Almaden Blvd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.894902,
+          37.333988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Powell St BART Station (Market St at 4th St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40490436554,
+          37.7863752686158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Myrtle St at Polk St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.419621646404,
+          37.7854338278682
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hyde St at Post St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41665109992,
+          37.787349023166
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "China Basin St at 3rd St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3899698,
+          37.7719996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Turk St at Fillmore St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.431946396828,
+          37.7804500599635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lane St at Revere Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.390055656433,
+          37.7317266935217
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salesforce Transit Center (Natoma St at 2nd St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.398284673691,
+          37.787492104386
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Newhall St at 3rd St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.389617785811,
+          37.7385718712673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mendell St at Fairfax Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.385655492544,
+          37.7398530179841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Masonic Ave at Turk St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.447291314602,
+          37.7790466584721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "20th St at Dolores St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.426093816757,
+          37.7582384241793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Golden Gate Ave at Franklin St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.421933710575,
+          37.7807871267462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Woolsey St at Sacramento St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2781754,
+          37.8505777
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "24th St at Bartlett St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.419723570347,
+          37.7521049844236
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Randall St at Chenery St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.425522506237,
+          37.739812717349
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Backesto Park (Jackson St at 13th St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.886049807072,
+          37.3528868272912
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Taylor St at 9th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.891937255859,
+          37.353061661331
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "8th St at Ringold St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.409449368715,
+          37.7745204011369
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Howard St at 8th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4113061,
+          37.7765126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "University Ave at Oxford St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2664467,
+          37.8723555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Addison St at Fourth St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2993708,
+          37.866249
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "3rd St at Townsend St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.392740827108,
+          37.7787416115368
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Channing Way at Shattuck Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2674431,
+          37.8658466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Haste St at College Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.253799438477,
+          37.8664179405032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "North Berkeley BART Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.283093,
+          37.873558
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "California St at University Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.279720306396,
+          37.8705553290575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hearst Ave at Euclid Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.260553240776,
+          37.8751116928644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fifth St at Delaware St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.299675941467,
+          37.8704071154654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vine St at Shattuck Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.269592285156,
+          37.8802224459068
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Virginia St at Shattuck Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.26952791214,
+          37.8765725491069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alcatraz Ave at Shattuck Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.265568971634,
+          37.8495949677766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bushrod Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2653043,
+          37.8465156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Isabella St at San Pablo Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.274844050407,
+          37.8149882304242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "College Ave at Alcatraz Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2525233,
+          37.8513755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "College Ave at Harwood Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2521599,
+          37.848152
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "West Oakland BART Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2948365,
+          37.8053183
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Franklin St at 9th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2720799,
+          37.8005161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lake Merritt BART Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2653199,
+          37.7973195
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Broadway at Battery St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.400868982077,
+          37.7985721084626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "2nd St at Julian St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.892843842506,
+          37.3411320354795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Valencia St at Clinton Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.422285079956,
+          37.7691881781046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "23rd St at Tennessee St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.388795018196,
+          37.7553671321585
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Goettingen St at Bacon St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.406599521637,
+          37.7269429662284
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "10th St at University Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.293399572372,
+          37.8690604754539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "8th St at Brannan St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.405786812305,
+          37.7714313629211
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Williams Ave at Apollo St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.398963272572,
+          37.7301675081509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Williams Ave at 3rd St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.39289611578,
+          37.7292786517303
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Pablo Ave at 27th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2756976,
+          37.8178269
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Market St at Brockhurst St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2757325,
+          37.8233214
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "34th St at Telegraph Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2663179,
+          37.8225475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mosswood Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.260436546103,
+          37.8248925299511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Broadway at 40th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2567156,
+          37.8277573
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mission St at 1st St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.9020161,
+          37.3509643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cyril Magnin St at Ellis St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.408915008432,
+          37.7858806269413
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "9th St at San Fernando St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8807965,
+          37.3383952
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Fernando St at 7th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.883214712143,
+          37.3371223728942
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Market St at Park St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.890349388123,
+          37.3324263012521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Webster St at O'Farrell St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.431157827377,
+          37.783520835261
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Yerba Buena Center for the Arts (Howard St at 3rd St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.400875687599,
+          37.7848720843606
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Almaden Blvd at Balbach St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8892731,
+          37.32673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Carlos St at 11th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8766132,
+          37.3364659
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Channing Way at San Pablo Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2902305,
+          37.8628271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "West St at University Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.286533117294,
+          37.869966707604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Derby St at College Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2535687,
+          37.8618037
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parker St at Fulton St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2647911,
+          37.8624644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ninth St at Parker St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2912095,
+          37.8588682
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Telegraph Ave at Carleton St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.258801,
+          37.8623199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ellsworth St at Russell St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.26157784462,
+          37.8574902145715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "S Van Ness Ave at Market St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.418954,
+          37.774814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Market St at 10th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.417385,
+          37.776619
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Webster St at Grove St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4295585,
+          37.7770527
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alamo Square (Steiner St at Fulton St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.43327409029,
+          37.7775467701732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Koshland Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.427316904068,
+          37.7734139699734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parker Ave at McAllister St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.453092932701,
+          37.7761009126459
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "2nd St at Townsend St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.390288,
+          37.780526
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grove St at Divisadero"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4377775,
+          37.775946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "McAllister St at Baker St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4418376,
+          37.7774157
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jackson Playground"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3987734,
+          37.7650259
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rhode Island St at 17th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4025701,
+          37.7644783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mississippi St at 17th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3947713,
+          37.7648022
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "17th & Folsom Street Park (17th St at Folsom St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4152042,
+          37.7637085
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18th St at Noe St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4326417,
+          37.7610471
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eureka Valley Recreation Center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4369431,
+          37.7591769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "23rd St at Taylor St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.878778338432,
+          37.3600013909666
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "South San Jose State (7th St at Humboldt St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.87009871006,
+          37.3203158210865
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stockton Ave at Lenzen Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.909148991108,
+          37.3367747627572
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bird Ave at Willow St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.896325349808,
+          37.3112839461174
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Greenwich St at Webster St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.434121668339,
+          37.799207926286
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Auzerais Ave at Lincoln Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.908296048641,
+          37.3209685314544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Carlos St at Meridian Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.913496851921,
+          37.3233446905968
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Pedro Square"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8940901,
+          37.336802
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Jose City Hall"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.886995,
+          37.337391
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Palm St at Willow St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.884995,
+          37.3172979
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Willow St at Vine St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8831724,
+          37.3184498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Pedro St at Hedding St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.905733,
+          37.352601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jackson St at 5th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.894797831774,
+          37.3487586867448
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ryland Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.895617,
+          37.342725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Saint James Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.889937,
+          37.339301
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SAP Center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.900084,
+          37.332692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Foothill Blvd at Harrington Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2177284,
+          37.77993
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Foothill Blvd at Fruitvale Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2226033,
+          37.7837569
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "23rd Ave at Foothill Blvd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2343822,
+          37.7851915
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "16th St Mission BART Station 2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.420091032982,
+          37.7647652154977
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Pablo Ave at MLK Jr Way"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2734217,
+          37.8113514
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "1st St at Younger Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.904436349869,
+          37.3550295822529
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Indiana St at Cesar Chavez St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.390447258949,
+          37.7504343570623
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adeline St at 40th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2782669,
+          37.8312769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "59th St at Horton St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2913604,
+          37.8409452
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "47th St at San Pablo Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.281050682068,
+          37.8356322045852
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Emeryville Public Market"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.293528318405,
+          37.8405211669497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Doyle St at 59th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2880451,
+          37.8419238
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "65th St at Hollis St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2913761,
+          37.8467842
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stanford Ave at Hollis St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2886647,
+          37.8384435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "24th St at Market St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2782444,
+          37.8160598
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Shattuck Ave at Telegraph Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2634901,
+          37.8332786
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Townsend St at 5th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.397437095642,
+          37.775234868606
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Berry St at 4th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.39317,
+          37.77588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "S Park St at 3rd St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3949894,
+          37.7807601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Civic Center/UN Plaza BART Station (Market St at McAllister St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4117382,
+          37.7810737
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Francisco Public Library (Grove St at Hyde St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4159292,
+          37.7787677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Golden Gate Ave at Polk St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41874,
+          37.78127
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Powell St BART Station (Market St at 5th St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.408444881439,
+          37.7838993570849
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fell St at Stanyan St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4537048,
+          37.7719511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Natoma St at New Montgomery St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.399607002735,
+          37.786553062581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mint St at Mission St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.407312989235,
+          37.782279529755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "7th St at Empire St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.890553236008,
+          37.3477119817597
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Utah St at 24th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40539252758,
+          37.7531234600965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Terry Francois Blvd at Warriors Way"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.38633275032,
+          37.7690948872811
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Terry Francois Blvd at Mission Bay Blvd N"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.386622428894,
+          37.7713295941951
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Francisco Caltrain Station (King St at 4th St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.394438385963,
+          37.7763288172859
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brannan St at 4th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.396973073483,
+          37.7779336700675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pier 1/2 at The Embarcadero"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3945855,
+          37.7963894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "45th St at Manila"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.256224155426,
+          37.8332935222321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "37th St at West St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.271797060966,
+          37.8266955864097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "27th St at MLK Jr Way"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2717615,
+          37.8170154
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jennings St at Revere Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.386536598206,
+          37.7293932066173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Heron's Head Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.376784086227,
+          37.7403217763913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "McAllister St at Arguello Blvd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.458333969116,
+          37.7752136678903
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Embarcadero at Pier 38"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.387920618057,
+          37.7829260870441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Carroll Ave at 3rd St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.394019961357,
+          37.7253751941352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arguello Blvd at Geary Blvd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.458806037903,
+          37.7814676153782
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "7th Ave at Cabrillo St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.465007305145,
+          37.7751755065867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chestnut St at Van Ness Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.424508631229,
+          37.802288386148
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "N 14th St at E Santa Clara St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.877292394638,
+          37.3426625921454
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oakdale Ave at Phelps St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.394250631332,
+          37.7368516211844
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "McKinnon Ave at 3rd St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.389969825745,
+          37.736295872171
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Post St at Divisadero St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.439478039742,
+          37.7843718110764
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "5th Ave at Anza St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.463141828775,
+          37.7794876092433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Evans Ave at Mendell St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.383736371994,
+          37.7401775433514
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Quesada Ave at 3rd St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.390972971916,
+          37.7330928099093
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ellis St at Pierce St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.435769885778,
+          37.7819816875272
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Folsom St at 9th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4116467,
+          37.7737172
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grove St at Gough St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.422952950001,
+          37.7778700702239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Turk Blvd at Stanyan St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.45462179184,
+          37.7776093102933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brannan St at Colin P Kelly Jr St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.39134311676,
+          37.7823857881241
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Newbury Park Dr at King Rd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.867966353893,
+          37.3655356585599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Columbia Ave at Bird Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.899719685316,
+          37.3241259511509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Willow St at Blewett Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.900010704994,
+          37.3090140742759
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19th Street BART Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.267950773239,
+          37.8093686121349
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Folsom St at 5th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.402865886688,
+          37.7806450925031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Asbury St at The Alameda"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.919478178024,
+          37.3380223131369
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "22nd St at William St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.864020824432,
+          37.3403787406505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "19th St at William St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.866520643234,
+          37.338468014146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "14th Ave at Geary Blvd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.472823262215,
+          37.7804712591775
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jack London Square"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.279352,
+          37.796248
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "W Julian St at N Morrison St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.908617913723,
+          37.3336771228599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brannan St at 7th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.403681278229,
+          37.7726578770706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Steiner St at California St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.435401082039,
+          37.7885689141616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "7th St at King St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.400886416435,
+          37.7712290179337
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "17th Ave at Geary Blvd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.47610360384,
+          37.7807198857556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "O'Farrell St at Masonic Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.447374463081,
+          37.7811305516987
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Greenwich St at Franklin St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.425919473171,
+          37.8002544307676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Funston Ave at Clement St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.471967637539,
+          37.7824978759638
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arguello Blvd at Edward St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.458645105362,
+          37.7784869863975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Powell St at Columbus Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.410887032747,
+          37.8004960366826
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "9th Ave at Geary Blvd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.46763586998,
+          37.7818407155205
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Egbert Ave at Jennings St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.392496466637,
+          37.7226299219322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Funston Ave at Fulton St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.47123003006,
+          37.773263176037
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Devine St at San Pedro St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.895644068718,
+          37.3386706046394
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Russell St at College Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2532529,
+          37.8584732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mercado Way at Sierra Rd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.881331801414,
+          37.371116413359
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Webster St at Clay St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.432590126991,
+          37.7908030324239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Folsom St at 7th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.407908439636,
+          37.7766637828306
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "53rd St at Hollis St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2871801,
+          37.8361823
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "George St at 1st St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.899662017822,
+          37.3475925744389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "5th St at Taylor St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.895842552185,
+          37.3509017927462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Frederick St at Arguello Blvd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.457636594772,
+          37.7657829867963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Park Ave at Laurel Grove Ln"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.904911100864,
+          37.3262823241058
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "St James St at 9th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.884389519691,
+          37.3432084884735
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Frida Kahlo Way at Cloud Cir"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.452443838119,
+          37.7258897887525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "7th Ave at Irving St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.464063167572,
+          37.7634336102325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Battery St at Filbert St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.40177154541,
+          37.8021978524491
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "10th Ave at Irving St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.467378377914,
+          37.7640909342992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Funston Ave at Irving St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.470650672913,
+          37.7639340252141
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Otis St at Brady St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41979598999,
+          37.7723033481967
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "22nd St Caltrain Station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.391884922981,
+          37.7577040414901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "21st St at 5th Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.247458696365,
+          37.8004594117139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "7th Ave at Clement St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.465377449989,
+          37.7824385197767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Market St at Steuart St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.394838035107,
+          37.7944974460021
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Anza St at Collins St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.450012,
+          37.78068
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "St. Joseph's Ave at Geary Blvd"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.442534,
+          37.782476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Post St at Webster St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.431821,
+          37.785394
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Evans Ave at Newhall St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.386843,
+          37.742232
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cruise Terminal at Pier 27"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.402087,
+          37.804648
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Divisadero St at Clay St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.440688,
+          37.789688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "45th St at MLK Jr Way"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.2674183,
+          37.8335577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "18th Ave at California St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.477667,
+          37.785111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Clement St at 32nd Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.492844,
+          37.781722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alameda St at Henry Adams St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.404402792454,
+          37.7685457411846
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Green St at Van Ness Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.423534989357,
+          37.7976279088969
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Laurel St at California St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.450081,
+          37.786692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Spruce St at California St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.45342284441,
+          37.7865784995365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ninth St at Heinz Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.289698123932,
+          37.8539069616438
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "22nd St at Potrero Ave"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.405943,
+          37.756808
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "23rd Ave at Clement St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.482807,
+          37.78199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "48th Ave at Cabrillo St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.509071,
+          37.772954
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Clara St at 4th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.400811314583,
+          37.7806747713227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sanchez St at 17th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4306746,
+          37.7632417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Folsom St at 13th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.415674,
+          37.769757
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Illinois St at Cesar Chavez St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.386567443609,
+          37.7502000102521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "San Francisco City Hall (Polk St at Grove St)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.41823,
+          37.77865
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hubbell St at 16th St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.398279309273,
+          37.7664826964395
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Delmas Ave and San Fernando St"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8977018,
+          37.3302641
+        ]
+      }
+    }
+  ]
+}
