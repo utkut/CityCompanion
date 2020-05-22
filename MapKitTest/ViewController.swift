@@ -398,7 +398,7 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
     }
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)  {
        if control == view.rightCalloutAccessoryView {
-            if let annotation = view.annotation as? SFBikes {
+        if let annotation = view.annotation as? SFBikes {
                 performSegue(withIdentifier: "moreDetail", sender: annotation)
         
             if let annotation = view.annotation as? MKPointAnnotation{
@@ -421,8 +421,13 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
                 }
             }
           }
+        if let annotation = sender as? SFBikes{
+        let SecondVC = segue.destination as! moreDetail
+        SecondVC.incomingStationName = annotation.title
+        SecondVC.incomingStationType = annotation.subtitle
+        SecondVC.incomingCoordinate  = annotation.coordinate
         }
-        
+    }
     }
 
 extension ViewController: HandleMapSearch {
@@ -489,18 +494,6 @@ extension ViewController: HandleMapSearch {
         return mapItem
             
         }
-        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if let identifier = segue.identifier {
-                if identifier == "moreDetail" {
-                    if let annotation = sender as? MKPointAnnotation {
-                        let SecondVC = segue.destination as! moreDetail
-                        SecondVC.incomingStationName = annotation.title
-                        SecondVC.incomingStationType = annotation.subtitle
-                        SecondVC.incomingCoordinate  = annotation.coordinate
-                    }
-                }
-            
-                }
             }
-}
+
 
