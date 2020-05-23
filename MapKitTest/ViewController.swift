@@ -400,13 +400,10 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
        if control == view.rightCalloutAccessoryView {
         if let annotation = view.annotation as? SFBikes {
                 performSegue(withIdentifier: "moreDetail", sender: annotation)
-        
-            if let annotation = view.annotation as? MKPointAnnotation{
-                performSegue(withIdentifier: "moreDetail", sender: annotation)
-                }
-        
         }
-        
+        if let annotation = view.annotation as? MKPointAnnotation {
+                       performSegue(withIdentifier: "moreDetail", sender: annotation)
+                       }
         }
     }
     
@@ -419,17 +416,18 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
                     SecondVC.incomingStationType = annotation.subtitle
                     SecondVC.incomingCoordinate  = annotation.coordinate
                 }
+                if let annotation = sender as? SFBikes {
+                let SecondVC = segue.destination as! moreDetail
+                SecondVC.incomingStationName = annotation.title
+                SecondVC.incomingStationType = annotation.subtitle
+                SecondVC.incomingCoordinate  = annotation.coordinate
+                }
             }
-          }
-        if let annotation = sender as? SFBikes{
-        let SecondVC = segue.destination as! moreDetail
-        SecondVC.incomingStationName = annotation.title
-        SecondVC.incomingStationType = annotation.subtitle
-        SecondVC.incomingCoordinate  = annotation.coordinate
-        }
+          
+        
     }
     }
-
+}
 extension ViewController: HandleMapSearch {
     
     func dropPinZoomIn(_ placemark: MKPlacemark) {
