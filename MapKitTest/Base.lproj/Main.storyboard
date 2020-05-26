@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yoa-AH-LL7">
-                                <rect key="frame" x="0.0" y="43" width="375" height="612"/>
+                                <rect key="frame" x="1" y="46" width="375" height="624"/>
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KG6-x2-Tjw">
                                 <rect key="frame" x="16" y="74" width="206" height="32"/>
@@ -62,13 +62,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pxs-QY-ZUo" secondAttribute="trailing" constant="29.329999999999998" id="Flt-Ah-yy4"/>
-                            <constraint firstItem="yoa-AH-LL7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NsX-1K-RjA"/>
+                            <constraint firstItem="yoa-AH-LL7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="1" id="NsX-1K-RjA"/>
                             <constraint firstItem="KG6-x2-Tjw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="SHd-AC-2hC"/>
-                            <constraint firstItem="yoa-AH-LL7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VM2-oY-QDs"/>
-                            <constraint firstItem="yoa-AH-LL7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-1" id="je8-l7-eDa"/>
+                            <constraint firstItem="yoa-AH-LL7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="VM2-oY-QDs"/>
+                            <constraint firstItem="yoa-AH-LL7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="2" id="je8-l7-eDa"/>
                             <constraint firstItem="KG6-x2-Tjw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kqy-wD-JOk"/>
                             <constraint firstItem="KG6-x2-Tjw" firstAttribute="top" secondItem="Pxs-QY-ZUo" secondAttribute="top" constant="-42" id="q24-ng-rol"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yoa-AH-LL7" secondAttribute="bottom" constant="12" id="u78-7Z-nLE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yoa-AH-LL7" secondAttribute="bottom" constant="-3" id="u78-7Z-nLE"/>
                             <constraint firstItem="Pxs-QY-ZUo" firstAttribute="leading" secondItem="KG6-x2-Tjw" secondAttribute="trailing" constant="98.666666666666686" id="xhQ-CK-H2Q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="105" y="136"/>
+            <point key="canvasLocation" x="104.8" y="135.38230884557723"/>
         </scene>
         <!--Location Search Table-->
         <scene sceneID="fdh-h6-FDt">
@@ -337,7 +337,7 @@ not have a commercial purpose.</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timestamp:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVV-Wr-mUA">
-                                <rect key="frame" x="95" y="646" width="185" height="21"/>
+                                <rect key="frame" x="95" y="627" width="185" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -375,7 +375,7 @@ not have a commercial purpose.</string>
                             <constraint firstItem="WY6-E5-tsj" firstAttribute="trailing" secondItem="PRh-bN-quY" secondAttribute="trailing" id="j7V-WV-zPk"/>
                             <constraint firstItem="WY6-E5-tsj" firstAttribute="top" secondItem="k0C-cf-Gmo" secondAttribute="bottom" constant="7" id="jDn-aP-4dx"/>
                             <constraint firstItem="7Px-DM-lWP" firstAttribute="top" secondItem="KqV-Hn-11b" secondAttribute="bottom" constant="61.999999999999943" id="kaY-GY-lk9"/>
-                            <constraint firstItem="nVV-Wr-mUA" firstAttribute="bottom" secondItem="gJF-qS-rco" secondAttribute="bottom" id="lcc-ms-BfK"/>
+                            <constraint firstItem="nVV-Wr-mUA" firstAttribute="bottom" secondItem="gJF-qS-rco" secondAttribute="bottom" constant="-19" id="lcc-ms-BfK"/>
                             <constraint firstItem="qQ3-nt-hEG" firstAttribute="top" secondItem="k0C-cf-Gmo" secondAttribute="bottom" constant="12" id="lx1-NG-Hlc"/>
                             <constraint firstItem="qQ3-nt-hEG" firstAttribute="leading" secondItem="KqV-Hn-11b" secondAttribute="leading" id="ogD-ZX-GWb"/>
                             <constraint firstItem="7Px-DM-lWP" firstAttribute="trailing" secondItem="WCa-Kh-ERy" secondAttribute="trailing" id="pLT-By-2Ki"/>

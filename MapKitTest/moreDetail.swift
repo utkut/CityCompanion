@@ -121,7 +121,7 @@ class moreDetail : UIViewController {
 		if incomingStationType == "Ford GoBike"{
 			compileSanFranciscoBikes()
 		}
-		if incomingStationName == "Tramvay Istasyonu"{
+		if incomingStationType == "Tramvay Istasyonu"{
 			CompileTramData()
 		}
         
@@ -159,14 +159,11 @@ func CompileTramData() {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "EEEE"
     let dayInWeek = dateFormatter.string(from: date)
-    if (incomingStationType == "Tramvay Istasyonu"){
-        
         firstCellLabel.isHidden = true
         secondCellLabel.isHidden = true
         statusImageView.isHidden = false
         emptyBikeImageView.isHidden = true
         freeBikeImageView.isHidden = true
-        
         if (dayInWeek == "Saturday" || dayInWeek == "Sunday"){
             etaLabel.text = "No Lines Running Today."
             timestamp()
@@ -203,11 +200,8 @@ func CompileTramData() {
                     statusImageView.image = UIImage(named: "unavailable.png")
                     timestamp()
                 }
-            }
-            else{
-                etaLabel.text = "Unable to Retrieve. "
                 
-            }
+            
         }
     }
 	

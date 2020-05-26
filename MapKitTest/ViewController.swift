@@ -402,8 +402,9 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
                 performSegue(withIdentifier: "moreDetail", sender: annotation)
         }
         if let annotation = view.annotation as? MKPointAnnotation {
-                       performSegue(withIdentifier: "moreDetail", sender: annotation)
-                       }
+        performSegue(withIdentifier: "moreDetail", sender: annotation)
+        }
+        
         }
     }
     
