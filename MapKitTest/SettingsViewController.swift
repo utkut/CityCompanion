@@ -26,8 +26,27 @@ class SettingsViewController: UIViewController {
         self.cityPicker.delegate = self
            }
     
-    
-    
+    @IBAction func tempUnitPicker(_ sender: Any) {
+        
+    let defaults = UserDefaults.standard
+        let segementName = defaults.bool(forKey: defaultsKeys.SelectedTemperature)
+        
+        switch (sender as AnyObject).selectedSegmentIndex
+        {
+       
+        case 0:
+        defaults.set("Celcius", forKey: defaultsKeys.SelectedTemperature)
+            break
+            
+        case 1:
+            defaults.set("Fahrenheit", forKey: defaultsKeys.SelectedTemperature)
+            break
+            
+        default:
+            break
+    }
+        
+    }
    @IBAction func setCityButtonClicked(_ sender: Any) {
 //    self.delegate?.SendDataToViewController(info: )
    let num = cityPicker.selectedRow(inComponent: 0) + 1

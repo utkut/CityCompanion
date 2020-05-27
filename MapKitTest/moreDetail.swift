@@ -214,7 +214,7 @@ func CompileTramData() {
         let timestamp = String(timeinhms)
         self.timestampLabel.text! = timestamp
     }
-    
+	
     func getDirections() {
     print("getting directions...")
         if let coordinate = incomingCoordinate {

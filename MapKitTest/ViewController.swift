@@ -13,9 +13,74 @@
 import UIKit
 import MapKit
 
+public struct Weather: Codable {
+    let coord: Coord
+    let weather: [WeatherElement]
+    let base: String
+    let main: Main
+    let visibility: Int
+    let wind: Wind
+    let clouds: Clouds
+    let dt: Int
+    let sys: Sys
+    let timezone, id: Int
+    let name: String
+    let cod: Int
+}
+
+// MARK: - Clouds
+struct Clouds: Codable {
+    let all: Int
+}
+
+// MARK: - Coord
+struct Coord: Codable {
+    let lon, lat: Double
+}
+
+// MARK: - Main
+struct Main: Codable {
+    let temp, feelsLike, tempMin, tempMax: Double
+    let pressure, humidity: Int
+
+    enum CodingKeys: String, CodingKey {
+        case temp
+        case feelsLike
+        case tempMin
+        case tempMax
+        case pressure, humidity
+    }
+}
+
+// MARK: - Sys
+struct Sys: Codable {
+    let type, id: Int
+    let country: String
+    let sunrise, sunset: Int
+}
+
+// MARK: - WeatherElement
+struct WeatherElement: Codable {
+    let id: Int
+    let main, weatherDescription, icon: String
+
+    enum CodingKeys: String, CodingKey {
+        case id, main
+        case weatherDescription
+        case icon
+    }
+}
+
+// MARK: - Wind
+struct Wind: Codable {
+    let speed: Double
+    let deg: Int
+}
+
+
 struct defaultsKeys {
     static let SelectedMainCity = "City"
-    static let keyTwo = "secondStringKey"
+    static let SelectedTemperature = "Celcius"
 }
 
 protocol HandleMapSearch {
@@ -80,6 +145,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
         definesPresentationContext = true
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
+        
+        if defaultsKeys.SelectedMainCity == "0"{
+            fetchWeather(urlinput: "https://api.openweathermap.org/data/2.5/weather?id=311044&appid=2e179bfc031d24d3f8c4263261237b0b&units=metric")
+        }
       }
     
     // MARK: - Coordinate Variables
@@ -288,12 +357,37 @@ class ViewController: UIViewController, UISearchBarDelegate {
                 // 5
                 print("Unexpected error: \(error).")
               }
-        
-        
-        
+    }
+   
+    func fetchWeather(urlinput: String){
+        if let url = URL(string: urlinput){
+        let task = URLSession.shared.dataTask(with: url) { (data, _, error) in
+        guard let dataResponse = data, error == nil else {
+        print(error?.localizedDescription ?? "Response Error")
+        return
             }
-    
-        
+        do {
+        //here dataResponse received from a network request
+        let jsonResponse = try JSONSerialization.jsonObject(with:
+                                       dataResponse, options: [])
+        print(jsonResponse) //Response result
+                do {
+                    //here dataResponse received from a network request
+                    let decoder = JSONDecoder()
+                    //Decode JSON Response Data
+                    let model = try decoder.decode(Weather.self, from: dataResponse)
+                    print(model)
+                }
+                catch let parsingError {
+                print("Error", parsingError)
+            }
+            }
+            catch let parsingError {
+            print("Error", parsingError)
+        }
+            }
+        }
+    }
     
     func clearMap() {
     let annotations = self.mapView.annotations
