@@ -29,7 +29,6 @@ class SettingsViewController: UIViewController {
     @IBAction func tempUnitPicker(_ sender: Any) {
         
     let defaults = UserDefaults.standard
-        let segementName = defaults.bool(forKey: defaultsKeys.SelectedTemperature)
         
         switch (sender as AnyObject).selectedSegmentIndex
         {
@@ -44,6 +43,7 @@ class SettingsViewController: UIViewController {
             
         default:
             break
+            
     }
         
     }

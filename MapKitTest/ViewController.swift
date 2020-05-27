@@ -13,7 +13,8 @@
 import UIKit
 import MapKit
 
-public struct Weather: Codable {
+// MARK: - Weather
+struct Weather: Codable {
     let coord: Coord
     let weather: [WeatherElement]
     let base: String
@@ -40,7 +41,7 @@ struct Coord: Codable {
 
 // MARK: - Main
 struct Main: Codable {
-    let temp, feelsLike, tempMin, tempMax: Double
+    let temp, feelsLike, tempMin, tempMax: Double?
     let pressure, humidity: Int
 
     enum CodingKeys: String, CodingKey {
@@ -62,8 +63,8 @@ struct Sys: Codable {
 // MARK: - WeatherElement
 struct WeatherElement: Codable {
     let id: Int
-    let main, weatherDescription, icon: String
-
+    let main, icon: String
+    let weatherDescription: String?
     enum CodingKeys: String, CodingKey {
         case id, main
         case weatherDescription
@@ -90,6 +91,8 @@ protocol HandleMapSearch {
 class ViewController: UIViewController, UISearchBarDelegate {
    
     var selectedPin: MKPlacemark?
+    @IBOutlet weak var weatherImage: UIImageView!
+    @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapType: UISegmentedControl!
     @IBAction func infoButtonClicked(_ sender: Any) {
@@ -110,6 +113,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBAction func myLocationClicked(_ sender: Any) {
         mapView.setUserTrackingMode(.follow, animated: true)
         }
+    
     var resultSearchController: UISearchController?
     private var bikeStations: [SFBikes] = []
     
@@ -119,7 +123,11 @@ class ViewController: UIViewController, UISearchBarDelegate {
     // Do any additional setup after loading the view
     let defaults = UserDefaults.standard
     let stringOne = defaults.integer(forKey: defaultsKeys.SelectedMainCity)
+    let stringTwo = defaults.integer(forKey: defaultsKeys.SelectedTemperature)
+        
     determineCity(input: stringOne)
+    
+
     
     mapView.delegate = self
     locationManager.requestWhenInUseAuthorization()
@@ -146,9 +154,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
         
-        if defaultsKeys.SelectedMainCity == "0"{
-            fetchWeather(urlinput: "https://api.openweathermap.org/data/2.5/weather?id=311044&appid=2e179bfc031d24d3f8c4263261237b0b&units=metric")
-        }
+        
       }
     
     // MARK: - Coordinate Variables
@@ -333,10 +339,14 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     func IzmirSelected()  {
+        
+        let url = "https://api.openweathermap.org/data/2.5/weather?id=311044&appid=2e179bfc031d24d3f8c4263261237b0b&units=metric"
+        fetchWeather(urlinput: url)
         IzmirBisimPinsDraw()
         IzmirTramPinsDraw()
+        
     }
-    
+    // MARK: - San Francisco Pins
     func SanFranciscoDraw(){
     guard let fileName = Bundle.main.url(forResource: "fordGoBike", withExtension: "geojson"),
         let data = try? Data(contentsOf: fileName)
@@ -358,9 +368,11 @@ class ViewController: UIViewController, UISearchBarDelegate {
                 print("Unexpected error: \(error).")
               }
     }
-   
+   // MARK: - Fetching Weather
     func fetchWeather(urlinput: String){
-        if let url = URL(string: urlinput){
+        
+        if let url = URL(string: urlinput) {
+            
         let task = URLSession.shared.dataTask(with: url) { (data, _, error) in
         guard let dataResponse = data, error == nil else {
         print(error?.localizedDescription ?? "Response Error")
@@ -377,17 +389,29 @@ class ViewController: UIViewController, UISearchBarDelegate {
                     //Decode JSON Response Data
                     let model = try decoder.decode(Weather.self, from: dataResponse)
                     print(model)
+                    
+                    DispatchQueue.main.async {
+                        
+                            }
+                    if let temp = model.main.temp {
+                        DispatchQueue.main.async {
+                            self.temperatureLabel.text = String(Int(temp))
+                            }
+                        }
+                    
+                    
                 }
                 catch let parsingError {
                 print("Error", parsingError)
-            }
+                }
             }
             catch let parsingError {
             print("Error", parsingError)
-        }
             }
         }
+        task.resume()
     }
+}
     
     func clearMap() {
     let annotations = self.mapView.annotations

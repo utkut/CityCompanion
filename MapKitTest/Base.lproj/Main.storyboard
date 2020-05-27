@@ -108,6 +108,8 @@
                     <connections>
                         <outlet property="mapType" destination="KG6-x2-Tjw" id="BPf-3d-WA6"/>
                         <outlet property="mapView" destination="yoa-AH-LL7" id="A0J-fJ-SSr"/>
+                        <outlet property="temperatureLabel" destination="XLp-hK-oRE" id="PC4-hV-Vse"/>
+                        <outlet property="weatherImage" destination="2LF-an-ZIo" id="9QP-Uq-3IJ"/>
                         <segue destination="Zej-qU-0cM" kind="show" identifier="moreDetail" id="8Ue-KW-vEE"/>
                         <segue destination="P3I-1W-CP4" kind="show" identifier="LocationSearchTable" id="4lE-ik-P2P"/>
                         <segue destination="KyM-hX-rmF" kind="show" identifier="SettingsViewControllerSegue" id="WeT-dN-6sj"/>
