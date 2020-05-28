@@ -209,7 +209,7 @@
                                     <segment title="Fahrenheit"/>
                                 </segments>
                                 <connections>
-                                    <action selector="tempUnitPicker:" destination="KyM-hX-rmF" eventType="valueChanged" id="rCW-KT-mxZ"/>
+                                    <action selector="weatherSegmentSelected:" destination="KyM-hX-rmF" eventType="valueChanged" id="NrV-aZ-tSk"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Unit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apQ-kI-Z6o">
@@ -248,6 +248,7 @@
                     <navigationItem key="navigationItem" title="Settings" id="3Z3-db-ujr"/>
                     <connections>
                         <outlet property="cityPicker" destination="wYa-h2-H1n" id="zcZ-Hs-0fU"/>
+                        <outlet property="weatherSegmentedControl" destination="b5O-OD-lDZ" id="dha-K0-GIH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEN-UW-cmQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

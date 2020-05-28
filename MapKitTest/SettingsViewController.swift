@@ -17,6 +17,7 @@ var selectedData:Int = 0
 class SettingsViewController: UIViewController {
     
     
+    @IBOutlet weak var weatherSegmentedControl: UISegmentedControl!
     @IBOutlet weak var cityPicker: UIPickerView!
     
     override func viewDidLoad() {
@@ -24,29 +25,28 @@ class SettingsViewController: UIViewController {
         
         self.cityPicker.dataSource = self
         self.cityPicker.delegate = self
+        
+        if let value = UserDefaults.standard.value(forKey: defaultsKeys.SelectedTemperature){
+            let selectedIndex = value as! Int
+            weatherSegmentedControl.selectedSegmentIndex = selectedIndex
+        }
            }
+   
+    @IBAction func weatherSegmentSelected(_ sender: UISegmentedControl) {
+        
+        UserDefaults.standard.set(sender.selectedSegmentIndex, forKey: defaultsKeys.SelectedTemperature)
+        
+//        switch weatherSegmentedControl.selectedSegmentIndex {
+//        case 0:
+//            UserDefaults.standard.set(0, forKey: defaultsKeys.SelectedTemperature)
+//        case 1:
+//            UserDefaults.standard.set(1, forKey: defaultsKeys.SelectedTemperature)
+//        default:
+//            break;
+//        }
+    }
     
-    @IBAction func tempUnitPicker(_ sender: Any) {
         
-    let defaults = UserDefaults.standard
-        
-        switch (sender as AnyObject).selectedSegmentIndex
-        {
-       
-        case 0:
-        defaults.set("Celcius", forKey: defaultsKeys.SelectedTemperature)
-            break
-            
-        case 1:
-            defaults.set("Fahrenheit", forKey: defaultsKeys.SelectedTemperature)
-            break
-            
-        default:
-            break
-            
-    }
-        
-    }
    @IBAction func setCityButtonClicked(_ sender: Any) {
 //    self.delegate?.SendDataToViewController(info: )
    let num = cityPicker.selectedRow(inComponent: 0) + 1

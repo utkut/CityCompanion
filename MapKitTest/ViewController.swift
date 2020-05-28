@@ -87,7 +87,7 @@ struct Wind: Codable {
 
 struct defaultsKeys {
     static let SelectedMainCity = "City"
-    static let SelectedTemperature = "Celcius"
+    static let SelectedTemperature = "Temperature"
 }
 
 protocol HandleMapSearch {
@@ -129,7 +129,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     // Do any additional setup after loading the view
     let defaults = UserDefaults.standard
     let stringOne = defaults.integer(forKey: defaultsKeys.SelectedMainCity)
-    let stringTwo = defaults.integer(forKey: defaultsKeys.SelectedTemperature)
+    
         
     determineCity(input: stringOne)
     
@@ -345,15 +345,32 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     func IzmirSelected()  {
-        
-        let url = "https://api.openweathermap.org/data/2.5/weather?id=311044&appid=2e179bfc031d24d3f8c4263261237b0b&units=metric"
-        fetchWeather(urlinput: url)
+        let defaults = UserDefaults.standard
+        let stringTwo = defaults.integer(forKey: defaultsKeys.SelectedTemperature)
+        let celsiusurl = "https://api.openweathermap.org/data/2.5/weather?id=311044&appid=2e179bfc031d24d3f8c4263261237b0b&units=metric"
+        let fahrenheiturl = "https://api.openweathermap.org/data/2.5/weather?id=311044&appid=2e179bfc031d24d3f8c4263261237b0b&units=imperial"
+        if stringTwo == 0{
+        fetchWeather(urlinput: celsiusurl, requestedTempUnit: stringTwo)
+        }
+        if stringTwo == 1 {
+            fetchWeather(urlinput: fahrenheiturl, requestedTempUnit: stringTwo)
+        }
         IzmirBisimPinsDraw()
         IzmirTramPinsDraw()
         
     }
     // MARK: - San Francisco Pins
     func SanFranciscoDraw(){
+    let defaults = UserDefaults.standard
+    let stringTwo = defaults.integer(forKey: defaultsKeys.SelectedTemperature)
+    let celsius = "https://api.openweathermap.org/data/2.5/weather?id=5391959&appid=2e179bfc031d24d3f8c4263261237b0b&units=metric"
+    let fahrenheit = "https://api.openweathermap.org/data/2.5/weather?id=5391959&appid=2e179bfc031d24d3f8c4263261237b0b&units=imperial"
+    if stringTwo == 0 {
+    fetchWeather(urlinput: celsius, requestedTempUnit: stringTwo)
+    }
+    if stringTwo == 1 {
+        fetchWeather(urlinput: fahrenheit, requestedTempUnit: stringTwo)
+    }
     guard let fileName = Bundle.main.url(forResource: "fordGoBike", withExtension: "geojson"),
         let data = try? Data(contentsOf: fileName)
         
@@ -373,9 +390,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
                 // 5
                 print("Unexpected error: \(error).")
               }
+    
     }
    // MARK: - Fetching Weather
-    func fetchWeather(urlinput: String){
+    func fetchWeather(urlinput: String, requestedTempUnit: Int){
         
         if let url = URL(string: urlinput) {
             
@@ -398,10 +416,13 @@ class ViewController: UIViewController, UISearchBarDelegate {
                     
                     if let temp = model.main.temp {
                         DispatchQueue.main.async {
-                            if defaultsKeys.SelectedTemperature == "Celcius"{
+                            
+                            if requestedTempUnit == 0 {
                                 self.temperatureLabel.text = String(Int(temp)) + "°C"
                             }
-                            
+                            if requestedTempUnit == 1 {
+                                self.temperatureLabel.text = String(Int(temp)) + "°F"
+                            }
                         }
                         
                         }
