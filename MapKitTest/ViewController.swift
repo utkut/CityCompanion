@@ -64,11 +64,17 @@ struct Sys: Codable {
 struct WeatherElement: Codable {
     let id: Int
     let main, icon: String
-    let weatherDescription: String?
+    var weatherDescription: String?
     enum CodingKeys: String, CodingKey {
         case id, main
         case weatherDescription
         case icon
+    }
+    init(weatherDescription:String?, id: Int, main:String, icon:String) {
+        self.weatherDescription = weatherDescription
+        self.id = id
+        self.main = main
+        self.icon = icon
     }
 }
 
@@ -390,13 +396,14 @@ class ViewController: UIViewController, UISearchBarDelegate {
                     let model = try decoder.decode(Weather.self, from: dataResponse)
                     print(model)
                     
-                    DispatchQueue.main.async {
-                        
-                            }
                     if let temp = model.main.temp {
                         DispatchQueue.main.async {
-                            self.temperatureLabel.text = String(Int(temp))
+                            if defaultsKeys.SelectedTemperature == "Celcius"{
+                                self.temperatureLabel.text = String(Int(temp)) + "°C"
                             }
+                            
+                        }
+                        
                         }
                     
                     
