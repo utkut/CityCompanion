@@ -36,14 +36,6 @@ class SettingsViewController: UIViewController {
         
         UserDefaults.standard.set(sender.selectedSegmentIndex, forKey: defaultsKeys.SelectedTemperature)
         
-//        switch weatherSegmentedControl.selectedSegmentIndex {
-//        case 0:
-//            UserDefaults.standard.set(0, forKey: defaultsKeys.SelectedTemperature)
-//        case 1:
-//            UserDefaults.standard.set(1, forKey: defaultsKeys.SelectedTemperature)
-//        default:
-//            break;
-//        }
     }
     
         

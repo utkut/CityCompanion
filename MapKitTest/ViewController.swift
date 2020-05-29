@@ -306,6 +306,17 @@ class ViewController: UIViewController, UISearchBarDelegate {
         setPinUsingMKPointAnnotation(name: "Işıklar", subtitle: "ANTBIS", locationname: Isiklar)
         setPinUsingMKPointAnnotation(name: "Sampi Kavşağı", subtitle: "ANTBIS", locationname: Sampi)
         setPinUsingMKPointAnnotation(name: "Düden Park", subtitle: "ANTBIS", locationname: DudenPark)
+        
+        let defaults = UserDefaults.standard
+        let stringTwo = defaults.integer(forKey: defaultsKeys.SelectedTemperature)
+        let weatherC = "https://api.openweathermap.org/data/2.5/weather?id=323776&appid=2e179bfc031d24d3f8c4263261237b0b&units=metric"
+        let weatherF = "https://api.openweathermap.org/data/2.5/weather?id=323776&appid=2e179bfc031d24d3f8c4263261237b0b&units=imperial"
+        if stringTwo == 0{
+        fetchWeather(urlinput: weatherC, requestedTempUnit: stringTwo)
+        }
+        if stringTwo == 1 {
+            fetchWeather(urlinput: weatherF, requestedTempUnit: stringTwo)
+        }
     }
     
     func determineCity(input: Int){
