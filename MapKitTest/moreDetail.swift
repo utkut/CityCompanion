@@ -254,8 +254,6 @@ func CompileTramData() {
             if let station = model.network.stations.first(where: { $0.name == stationName }) {
             //get the properties of station here as per requirement
                 DispatchQueue.main.async {
-//                    self.emptySlotsLabel.text = String(station.empty_slots)
-//                    self.freeBikesLabel.text = String(station.free_bikes)
 					
 					
                     self.firstCellLabel.text = "Empty Bike Slots: " + String(station.empty_slots)

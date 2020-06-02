@@ -63,7 +63,7 @@ struct Sys: Codable {
 // MARK: - WeatherElement
 struct WeatherElement: Codable {
     let id: Int
-    let main, icon: String
+    var main, icon: String
     var weatherDescription: String?
     enum CodingKeys: String, CodingKey {
         case id, main
@@ -95,7 +95,6 @@ protocol HandleMapSearch {
 }
 
 class ViewController: UIViewController, UISearchBarDelegate {
-   
     var selectedPin: MKPlacemark?
     @IBOutlet weak var weatherImage: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
@@ -129,7 +128,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
     // Do any additional setup after loading the view
     let defaults = UserDefaults.standard
     let stringOne = defaults.integer(forKey: defaultsKeys.SelectedMainCity)
-    
         
     determineCity(input: stringOne)
     
@@ -426,19 +424,32 @@ class ViewController: UIViewController, UISearchBarDelegate {
                     print(model)
                     
                     if let temp = model.main.temp {
+                       
+                                        
                         DispatchQueue.main.async {
                             
                             if requestedTempUnit == 0 {
                                 self.temperatureLabel.text = String(Int(temp)) + "°C"
+                                if let status = model.weather.first {
+                                    switch status.main {
+                                    case "Clouds":
+                                        self.weatherImage.image = UIImage(named: "cloud")
+                                    case "Clear":
+                                        self.weatherImage.image = UIImage(named: "sunny")
+                                    case "Snow":
+                                        self.weatherImage.image = UIImage(named: "snow")
+                                    case "Rain":
+                                        self.weatherImage.image = UIImage(named: "rain")
+                                    default:
+                                        break
+                                    }
+                                }
                             }
                             if requestedTempUnit == 1 {
                                 self.temperatureLabel.text = String(Int(temp)) + "°F"
                             }
                         }
-                        
-                        }
-                    
-                    
+                      }
                 }
                 catch let parsingError {
                 print("Error", parsingError)
