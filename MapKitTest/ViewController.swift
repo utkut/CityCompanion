@@ -440,6 +440,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
                                         self.weatherImage.image = UIImage(named: "snow")
                                     case "Rain":
                                         self.weatherImage.image = UIImage(named: "rain")
+                                    case "Thunderstorm":
+                                        self.weatherImage.image = UIImage(named: "thunderstorms")
+                                    case "Drizzle":
+                                        self.weatherImage.image = UIImage(named: "cloudy_with_light_rain")
                                     default:
                                         break
                                     }
