@@ -80,8 +80,8 @@ struct WeatherElement: Codable {
 
 // MARK: - Wind
 struct Wind: Codable {
-    let speed: Double
-    let deg: Int
+    let speed: Double?
+    let deg: Int?
 }
 
 
@@ -451,6 +451,24 @@ class ViewController: UIViewController, UISearchBarDelegate {
                             }
                             if requestedTempUnit == 1 {
                                 self.temperatureLabel.text = String(Int(temp)) + "°F"
+                                if let status = model.weather.first {
+                                    switch status.main {
+                                    case "Clouds":
+                                        self.weatherImage.image = UIImage(named: "cloud")
+                                    case "Clear":
+                                        self.weatherImage.image = UIImage(named: "sunny")
+                                    case "Snow":
+                                        self.weatherImage.image = UIImage(named: "snow")
+                                    case "Rain":
+                                        self.weatherImage.image = UIImage(named: "rain")
+                                    case "Thunderstorm":
+                                        self.weatherImage.image = UIImage(named: "thunderstorms")
+                                    case "Drizzle":
+                                        self.weatherImage.image = UIImage(named: "cloudy_with_light_rain")
+                                    default:
+                                        break
+                                    }
+                                }
                             }
                         }
                       }
