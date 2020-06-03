@@ -443,7 +443,18 @@ not have a commercial purpose.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gJF-qS-rco"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xFI-zv-fPm"/>
+                    <navigationItem key="navigationItem" id="xFI-zv-fPm">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Vtv-ni-CFu">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8RP-wj-y29">
+                                <rect key="frame" x="341" y="11" width="18" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="arrow.clockwise" catalog="system"/>
+                                <connections>
+                                    <action selector="refreshButtonClicked:" destination="Zej-qU-0cM" eventType="touchUpInside" id="ZBx-NH-4LK"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emptyBikeImageView" destination="7Px-DM-lWP" id="8ON-GJ-LpI"/>
                         <outlet property="etaLabel" destination="PRh-bN-quY" id="lY8-V0-0lk"/>
@@ -480,6 +491,7 @@ not have a commercial purpose.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="location" catalog="system" width="128" height="115"/>
     </resources>

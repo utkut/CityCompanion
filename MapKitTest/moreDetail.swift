@@ -152,7 +152,11 @@ class moreDetail : UIViewController {
 		}
     }
     
-
+	@IBAction func refreshButtonClicked(_ sender: Any) {
+		self.viewDidLoad()
+		self.viewWillAppear(true)
+	}
+	
 // Function to read the frequency of Tram depending on the day.
 func CompileTramData() {
     let date = Date()
