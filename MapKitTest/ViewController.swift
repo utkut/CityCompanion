@@ -433,13 +433,51 @@ class ViewController: UIViewController, UISearchBarDelegate {
                                 if let status = model.weather.first {
                                     switch status.main {
                                     case "Clouds":
+                                        if status.id == 801 {
+                                        self.weatherImage.image = UIImage(named: "sunny_intervals")
+                                        }
+                                        if status.id == 802 {
+                                        self.weatherImage.image = UIImage(named: "sunny_intervals")
+                                        }
+                                        if status.id == 803 {
                                         self.weatherImage.image = UIImage(named: "cloud")
+                                        }
+                                        if status.id == 804 {
+                                        self.weatherImage.image = UIImage(named: "white_cloud")
+                                        }
                                     case "Clear":
                                         self.weatherImage.image = UIImage(named: "sunny")
                                     case "Snow":
                                         self.weatherImage.image = UIImage(named: "snow")
                                     case "Rain":
+                                        if status.id == 500 {
                                         self.weatherImage.image = UIImage(named: "rain")
+                                        }
+                                        if status.id == 501 {
+                                        self.weatherImage.image = UIImage(named: "light_rain_showers")
+                                        }
+                                        if status.id == 502 {
+                                        self.weatherImage.image = UIImage(named: "heavy_rain_showers")
+                                        }
+                                        if status.id == 503 {
+                                        self.weatherImage.image = UIImage(named: "heavy_rain_showers")
+                                        }
+                                        if status.id == 504 {
+                                        self.weatherImage.image = UIImage(named: "heavy_rain_showers")
+                                        }
+                                        if status.id == 511 {
+                                        self.weatherImage.image = UIImage(named: "cloudy_with_sleet")
+                                        }
+                                        if status.id == 520 {
+                                        self.weatherImage.image = UIImage(named: "heavy_rain_showers")
+                                        }
+                                        if status.id == 521 {
+                                        self.weatherImage.image = UIImage(named: "heavy_rain_showers")
+                                        }
+                                        if status.id == 522 {
+                                        self.weatherImage.image = UIImage(named: "heavy_rain_showers")
+                                        }
+
                                     case "Thunderstorm":
                                         self.weatherImage.image = UIImage(named: "thunderstorms")
                                     case "Drizzle":
@@ -454,13 +492,50 @@ class ViewController: UIViewController, UISearchBarDelegate {
                                 if let status = model.weather.first {
                                     switch status.main {
                                     case "Clouds":
+                                        if status.id == 801 {
+                                        self.weatherImage.image = UIImage(named: "sunny_intervals")
+                                        }
+                                        if status.id == 802 {
+                                        self.weatherImage.image = UIImage(named: "sunny_intervals")
+                                        }
+                                        if status.id == 803 {
                                         self.weatherImage.image = UIImage(named: "cloud")
+                                        }
+                                        if status.id == 804 {
+                                        self.weatherImage.image = UIImage(named: "white_cloud")
+                                        }
                                     case "Clear":
                                         self.weatherImage.image = UIImage(named: "sunny")
                                     case "Snow":
                                         self.weatherImage.image = UIImage(named: "snow")
                                     case "Rain":
+                                        if status.id == 500 {
                                         self.weatherImage.image = UIImage(named: "rain")
+                                        }
+                                        if status.id == 501 {
+                                        self.weatherImage.image = UIImage(named: "light_rain_showers")
+                                        }
+                                        if status.id == 502 {
+                                        self.weatherImage.image = UIImage(named: "heavy_rain_showers")
+                                        }
+                                        if status.id == 503 {
+                                        self.weatherImage.image = UIImage(named: "heavy_rain_showers")
+                                        }
+                                        if status.id == 504 {
+                                        self.weatherImage.image = UIImage(named: "heavy_rain_showers")
+                                        }
+                                        if status.id == 511 {
+                                        self.weatherImage.image = UIImage(named: "cloudy_with_sleet")
+                                        }
+                                        if status.id == 520 {
+                                        self.weatherImage.image = UIImage(named: "heavy_rain_showers")
+                                        }
+                                        if status.id == 521 {
+                                        self.weatherImage.image = UIImage(named: "heavy_rain_showers")
+                                        }
+                                        if status.id == 522 {
+                                        self.weatherImage.image = UIImage(named: "heavy_rain_showers")
+                                        }
                                     case "Thunderstorm":
                                         self.weatherImage.image = UIImage(named: "thunderstorms")
                                     case "Drizzle":
