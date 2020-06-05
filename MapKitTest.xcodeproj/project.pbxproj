@@ -21,6 +21,7 @@
 		65F4A5F5246005DD00833C63 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F4A5F4246005DD00833C63 /* LocationSearchTable.swift */; };
 		B822E5B72470B9EA0097C44B /* MapKitTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B822E5B62470B9EA0097C44B /* MapKitTestTests.swift */; };
 		B89A11E4248A158800936FF8 /* izmirvapur.geojson in Resources */ = {isa = PBXBuildFile; fileRef = B89A11E3248A158800936FF8 /* izmirvapur.geojson */; };
+		B89A11E6248A2E3000936FF8 /* FerryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89A11E5248A2E3000936FF8 /* FerryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		B822E5B62470B9EA0097C44B /* MapKitTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitTestTests.swift; sourceTree = "<group>"; };
 		B822E5B82470B9EA0097C44B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B89A11E3248A158800936FF8 /* izmirvapur.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = izmirvapur.geojson; sourceTree = "<group>"; };
+		B89A11E5248A2E3000936FF8 /* FerryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FerryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				653E293B2455451E00242E49 /* Assets.xcassets */,
 				653E293D2455451E00242E49 /* LaunchScreen.storyboard */,
 				653E29402455451F00242E49 /* Info.plist */,
+				B89A11E5248A2E3000936FF8 /* FerryViewController.swift */,
 			);
 			path = MapKitTest;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				653E29372455451B00242E49 /* ViewController.swift in Sources */,
+				B89A11E6248A2E3000936FF8 /* FerryViewController.swift in Sources */,
 				6573451C2456A41B005F2A4C /* moreDetail.swift in Sources */,
 				652FDF5D246BF4F300024771 /* SettingsViewController.swift in Sources */,
 				65CD1D5C24581B3100DDA67D /* infoViewController.swift in Sources */,
@@ -407,7 +411,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = "1.1.3 - BETA";
 				PRODUCT_BUNDLE_IDENTIFIER = com.utkutarhan.MapKitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -429,7 +433,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = "1.1.3 - BETA";
 				PRODUCT_BUNDLE_IDENTIFIER = com.utkutarhan.MapKitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -19,7 +19,7 @@ struct Weather: Codable {
     let weather: [WeatherElement]
     let base: String
     let main: Main
-    let visibility: Int
+    let visibility: Int?
     let wind: Wind
     let clouds: Clouds
     let dt: Int

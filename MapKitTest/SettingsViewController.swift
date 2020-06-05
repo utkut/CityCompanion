@@ -31,8 +31,7 @@ class SettingsViewController: UIViewController {
             let selectedIndex = value as! Int
             weatherSegmentedControl.selectedSegmentIndex = selectedIndex
         }
-           }
-   
+    }
     @IBAction func weatherSegmentSelected(_ sender: UISegmentedControl) {
         
         UserDefaults.standard.set(sender.selectedSegmentIndex, forKey: defaultsKeys.SelectedTemperature)
