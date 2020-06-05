@@ -579,9 +579,9 @@ class ViewController: UIViewController, UISearchBarDelegate {
 }
     
     func clearMap() {
-    let annotations = self.mapView.annotations
-    self.mapView.removeAnnotations(annotations)
-    self.mapView.removeOverlays(mapView.overlays)
+        let annotations = self.mapView.annotations
+        self.mapView.removeAnnotations(annotations)
+        self.mapView.removeOverlays(mapView.overlays)
     }
 
     // MARK: - showRouteOnMap
@@ -693,7 +693,7 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
         performSegue(withIdentifier: "moreDetail", sender: annotation)
         }
         if let annotation = view.annotation as? IzmirVapur {
-                performSegue(withIdentifier: "moreDetail", sender: annotation)
+                performSegue(withIdentifier: "showFerrySegue", sender: annotation)
         }
         }
     }
@@ -701,30 +701,30 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {        
         if let identifier = segue.identifier {
             if identifier == "moreDetail" {
-                if let annotation = sender as? MKPointAnnotation {
+            if let annotation = sender as? MKPointAnnotation {
                     let SecondVC = segue.destination as! moreDetail
                     SecondVC.incomingStationName = annotation.title
                     SecondVC.incomingStationType = annotation.subtitle
                     SecondVC.incomingCoordinate  = annotation.coordinate
-                }
-                if let annotation = sender as? SFBikes {
-                let SecondVC = segue.destination as! moreDetail
-                SecondVC.incomingStationName = annotation.title
-                SecondVC.incomingStationType = annotation.subtitle
-                SecondVC.incomingCoordinate  = annotation.coordinate
-                }
-                if let annotation = sender as? IzmirVapur {
-                let SecondVC = segue.destination as! moreDetail
-                SecondVC.incomingStationName = annotation.title
-                SecondVC.incomingStationType = annotation.subtitle
-                SecondVC.incomingCoordinate  = annotation.coordinate
+                    }
+            if let annotation = sender as? SFBikes {
+                    let SecondVC = segue.destination as! moreDetail
+                    SecondVC.incomingStationName = annotation.title
+                    SecondVC.incomingStationType = annotation.subtitle
+                    SecondVC.incomingCoordinate  = annotation.coordinate
+                    }
+            }
+            if identifier == "showFerrySegue" {
+                    if let annotation = sender as? IzmirVapur {
+                    let SecondVC = segue.destination as! FerryViewController
+                    SecondVC.incomingStationName = annotation.title
+                    SecondVC.incomingStationType = annotation.subtitle
+                    SecondVC.incomingCoordinate  = annotation.coordinate
+                    }
                 }
             }
-          
-        
+        }
     }
-    }
-}
 extension ViewController: HandleMapSearch {
     
     func dropPinZoomIn(_ placemark: MKPlacemark) {

@@ -8,17 +8,40 @@
 
 import Foundation
 import UIKit
+import MapKit
 
-class FerryViewController: ViewController {
+class FerryViewController: UIViewController {
 
     @IBOutlet weak var FerryName: UILabel!
+    @IBOutlet weak var StationType: UILabel!
     @IBOutlet weak var destinationPicker: UIPickerView!
+    
     var IzmirFerryData = ["Bostanli", "Karsiyaka", "Alsancak", "Pasaport", "Konak", "Goztepe", "Uckuyular"]
+    var incomingStationName: String?
+    var incomingStationType: String?
+    var incomingCoordinate: CLLocationCoordinate2D?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        FerryName.text = incomingStationName
+        StationType.text = incomingStationType
+        self.destinationPicker.dataSource = self
+        self.destinationPicker.delegate = self
     }
     
+    @IBAction func getDirectionsClicked(_ sender: Any) {
+        print("getting directions...")
+        if let coordinate = incomingCoordinate {
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: nil)
+        let region = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.02))
+        let mapItem = MKMapItem(placemark: placemark)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: region.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: region.span)]
+        mapItem.name = incomingStationName
+        mapItem.openInMaps(launchOptions: options)
+        }
+    }
     
 }
 

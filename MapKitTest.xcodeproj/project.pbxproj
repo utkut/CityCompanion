@@ -102,6 +102,7 @@
 				65CD1D5B24581B3100DDA67D /* infoViewController.swift */,
 				65F4A5F4246005DD00833C63 /* LocationSearchTable.swift */,
 				6573451B2456A41B005F2A4C /* moreDetail.swift */,
+				B89A11E5248A2E3000936FF8 /* FerryViewController.swift */,
 				653E29362455451B00242E49 /* ViewController.swift */,
 				653E29322455451B00242E49 /* AppDelegate.swift */,
 				652FDF5C246BF4F300024771 /* SettingsViewController.swift */,
@@ -110,7 +111,6 @@
 				653E293B2455451E00242E49 /* Assets.xcassets */,
 				653E293D2455451E00242E49 /* LaunchScreen.storyboard */,
 				653E29402455451F00242E49 /* Info.plist */,
-				B89A11E5248A2E3000936FF8 /* FerryViewController.swift */,
 			);
 			path = MapKitTest;
 			sourceTree = "<group>";
