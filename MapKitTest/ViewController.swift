@@ -692,7 +692,9 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
         if let annotation = view.annotation as? MKPointAnnotation {
         performSegue(withIdentifier: "moreDetail", sender: annotation)
         }
-        
+        if let annotation = view.annotation as? IzmirVapur {
+                performSegue(withIdentifier: "moreDetail", sender: annotation)
+        }
         }
     }
     
@@ -706,6 +708,12 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
                     SecondVC.incomingCoordinate  = annotation.coordinate
                 }
                 if let annotation = sender as? SFBikes {
+                let SecondVC = segue.destination as! moreDetail
+                SecondVC.incomingStationName = annotation.title
+                SecondVC.incomingStationType = annotation.subtitle
+                SecondVC.incomingCoordinate  = annotation.coordinate
+                }
+                if let annotation = sender as? IzmirVapur {
                 let SecondVC = segue.destination as! moreDetail
                 SecondVC.incomingStationName = annotation.title
                 SecondVC.incomingStationType = annotation.subtitle
