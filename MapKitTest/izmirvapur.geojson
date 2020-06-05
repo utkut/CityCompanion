@@ -1,0 +1,75 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 27.097652,38.452226 ]
+    },
+    "properties": {
+    "name":"Bostanli"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 27.120540,38.454916 ]
+    },
+    "properties": {
+    "name":"Karsiyaka"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 27.140715,38.439054 ]
+    },
+    "properties": {
+    "name":"Alsancak"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 27.132285,38.428932 ]
+    },
+    "properties": {
+    "name":"Pasaport"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 27.125050,38.419228 ]
+    },
+    "properties": {
+    "name":"Konak"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 27.083631,38.400143 ]
+    },
+    "properties": {
+    "name":"Goztepe"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 27.069929,38.405214 ]
+    },
+    "properties": {
+    "name":"Uckuyular"
+    }
+  }
+]
+}

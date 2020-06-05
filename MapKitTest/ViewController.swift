@@ -121,7 +121,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     var resultSearchController: UISearchController?
     private var bikeStations: [SFBikes] = []
-    
+    private var ferryStations: [IzmirVapur] = []
     override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -366,7 +366,25 @@ class ViewController: UIViewController, UISearchBarDelegate {
         }
         IzmirBisimPinsDraw()
         IzmirTramPinsDraw()
-        
+        guard let fileName = Bundle.main.url(forResource: "izmirvapur", withExtension: "geojson"),
+            let data = try? Data(contentsOf: fileName)
+            
+          else {
+            return
+        }
+            do {
+                 let SeaAnnotations = try MKGeoJSONDecoder()
+                      .decode(data)
+                      .compactMap { $0 as? MKGeoJSONFeature }
+                    // 3
+                    let validstations = SeaAnnotations.compactMap(IzmirVapur.init)
+                    ferryStations.append(contentsOf: validstations)
+                    mapView.addAnnotations(ferryStations)
+                    
+                  } catch {
+                    // 5
+                    print("Unexpected error: \(error).")
+                  }
     }
     // MARK: - San Francisco Pins
     func SanFranciscoDraw(){
@@ -640,7 +658,7 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
             annotationView.canShowCallout = true
             
             if annotation.subtitle == "Bisim" || annotation.subtitle == "ANTBIS" || annotation.subtitle == "Ford GoBike" {
-                annotationView.markerTintColor = .systemBlue
+                annotationView.markerTintColor = .systemPurple
                 annotationView.glyphImage = UIImage(named: "bike")
             }
             if annotation.subtitle == "Tramvay Istasyonu" {
@@ -653,6 +671,11 @@ func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayR
             if (annotation.subtitle == "Airport"){
                 annotationView.markerTintColor = .systemOrange
                 annotationView.glyphImage = UIImage(named: "airport")
+            }
+            if (annotation.subtitle == "Ferry"){
+                annotationView.markerTintColor = .systemBlue
+                annotationView.glyphImage = UIImage(named: "ferry")
+                
             }
             
             let btn = UIButton(type: .detailDisclosure)
@@ -775,7 +798,7 @@ class IzmirVapur: NSObject, MKAnnotation {
      }
      
      var subtitle: String? {
-       return "Vapur Iskelesi"
+       return "Ferry"
      }
      init?(feature: MKGeoJSONFeature) {
           // 1
