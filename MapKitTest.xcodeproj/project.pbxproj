@@ -99,16 +99,9 @@
 		653E29312455451B00242E49 /* MapKitTest */ = {
 			isa = PBXGroup;
 			children = (
-				B89A11E3248A158800936FF8 /* izmirvapur.geojson */,
-				65AEFDCC24779BB900044CB3 /* fordGoBike.geojson */,
-				65CD1D5B24581B3100DDA67D /* infoViewController.swift */,
-				65F4A5F4246005DD00833C63 /* LocationSearchTable.swift */,
-				6573451B2456A41B005F2A4C /* moreDetail.swift */,
-				B89A11E5248A2E3000936FF8 /* FerryViewController.swift */,
-				B89A11E7248A568B00936FF8 /* FerryTableView.swift */,
-				653E29362455451B00242E49 /* ViewController.swift */,
+				B89A11EA248B1E1300936FF8 /* ViewControllers */,
+				B89A11E9248B1DEB00936FF8 /* GeoJSON Files */,
 				653E29322455451B00242E49 /* AppDelegate.swift */,
-				652FDF5C246BF4F300024771 /* SettingsViewController.swift */,
 				653E29342455451B00242E49 /* SceneDelegate.swift */,
 				653E29382455451C00242E49 /* Main.storyboard */,
 				653E293B2455451E00242E49 /* Assets.xcassets */,
@@ -133,6 +126,29 @@
 				B822E5B82470B9EA0097C44B /* Info.plist */,
 			);
 			path = MapKitTestTests;
+			sourceTree = "<group>";
+		};
+		B89A11E9248B1DEB00936FF8 /* GeoJSON Files */ = {
+			isa = PBXGroup;
+			children = (
+				65AEFDCC24779BB900044CB3 /* fordGoBike.geojson */,
+				B89A11E3248A158800936FF8 /* izmirvapur.geojson */,
+			);
+			name = "GeoJSON Files";
+			sourceTree = "<group>";
+		};
+		B89A11EA248B1E1300936FF8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				65CD1D5B24581B3100DDA67D /* infoViewController.swift */,
+				65F4A5F4246005DD00833C63 /* LocationSearchTable.swift */,
+				6573451B2456A41B005F2A4C /* moreDetail.swift */,
+				B89A11E5248A2E3000936FF8 /* FerryViewController.swift */,
+				B89A11E7248A568B00936FF8 /* FerryTableView.swift */,
+				653E29362455451B00242E49 /* ViewController.swift */,
+				652FDF5C246BF4F300024771 /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
