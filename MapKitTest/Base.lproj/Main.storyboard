@@ -448,7 +448,7 @@ not have a commercial purpose.</string>
                         <viewLayoutGuide key="safeArea" id="gJF-qS-rco"/>
                     </view>
                     <navigationItem key="navigationItem" id="xFI-zv-fPm">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Vtv-ni-CFu">
+                        <barButtonItem key="rightBarButtonItem" style="done" id="Vtv-ni-CFu">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8RP-wj-y29">
                                 <rect key="frame" x="341" y="11" width="18" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -484,7 +484,7 @@ not have a commercial purpose.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="Btj-xV-eoq" detailTextLabel="Iiq-xp-LMb" style="IBUITableViewCellStyleSubtitle" id="Q6S-18-d1L">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="Btj-xV-eoq" detailTextLabel="Iiq-xp-LMb" style="IBUITableViewCellStyleSubtitle" id="Q6S-18-d1L">
                                 <rect key="frame" x="0.0" y="28" width="375" height="55.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q6S-18-d1L" id="spM-Kz-FUe">
