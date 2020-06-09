@@ -172,6 +172,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
        mapView.setRegion(coordinateRegion, animated: true)
        mapView.addAnnotation(annotation)
     }
+    @IBAction func refreshClicked(_ sender: Any) {
+        self.viewDidLoad()
+        self.viewWillAppear(true)
+    }
     
     // MARK: - Izmir Tram Stop Pins
     func IzmirTramPinsDraw(){
