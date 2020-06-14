@@ -17,6 +17,7 @@ class FerryViewController: UIViewController {
     @IBOutlet weak var destinationPicker: UIPickerView!
     
     var IzmirFerryData = ["Bostanli", "Karsiyaka", "Alsancak", "Pasaport", "Konak", "Goztepe", "Uckuyular"]
+    var SelectedFerryString = ""
     var incomingStationName: String?
     var incomingStationType: String?
     var incomingCoordinate: CLLocationCoordinate2D?
@@ -60,6 +61,12 @@ extension FerryViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+
+        let valueSelected = IzmirFerryData[row]
+        print(valueSelected)
+        // Pass the data to the FerryTableView
         
+        let vc = FerryTableView()
+        vc.incomingFerryStation = valueSelected
     }
 }
