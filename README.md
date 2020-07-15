@@ -1,6 +1,6 @@
 # CityCompanion
 
-[![CodeFactor](https://www.codefactor.io/repository/github/utkut/mapkittest/badge)](https://www.codefactor.io/repository/github/utkut/CityCompanion)
+[![CodeFactor](https://www.codefactor.io/repository/github/utkut/citycompanion/badge)](https://www.codefactor.io/repository/github/utkut/citycompanion)
 
 <img src="https://github.com/utkut/MapKitTest/blob/master/Images/ss1.png?raw=true" width="120" height="250" title="Main Screen"><img src="https://github.com/utkut/MapKitTest/blob/master/Images/ss2.png?raw=true" width="120" height="250" title="Main Screen"><img src="https://github.com/utkut/MapKitTest/blob/master/Images/ss3.png?raw=true" width="120" height="250" title="Main Screen"><img src="https://github.com/utkut/MapKitTest/blob/master/Images/ss4.png?raw=true" width="120" height="250" title="Main Screen">
 
