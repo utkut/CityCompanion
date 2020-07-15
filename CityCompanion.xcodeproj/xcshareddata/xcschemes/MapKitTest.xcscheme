@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "653E292E2455451B00242E49"
-               BuildableName = "MapKitTest.app"
-               BlueprintName = "MapKitTest"
-               ReferencedContainer = "container:MapKitTest.xcodeproj">
+               BuildableName = "CityCompanion.app"
+               BlueprintName = "CityCompanion"
+               ReferencedContainer = "container:CityCompanion.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B822E5B32470B9EA0097C44B"
-               BuildableName = "MapKitTestTests.xctest"
-               BlueprintName = "MapKitTestTests"
-               ReferencedContainer = "container:MapKitTest.xcodeproj">
+               BuildableName = "CityCompanionTests.xctest"
+               BlueprintName = "CityCompanionTests"
+               ReferencedContainer = "container:CityCompanion.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "653E292E2455451B00242E49"
-            BuildableName = "MapKitTest.app"
-            BlueprintName = "MapKitTest"
-            ReferencedContainer = "container:MapKitTest.xcodeproj">
+            BuildableName = "CityCompanion.app"
+            BlueprintName = "CityCompanion"
+            ReferencedContainer = "container:CityCompanion.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "653E292E2455451B00242E49"
-            BuildableName = "MapKitTest.app"
-            BlueprintName = "MapKitTest"
-            ReferencedContainer = "container:MapKitTest.xcodeproj">
+            BuildableName = "CityCompanion.app"
+            BlueprintName = "CityCompanion"
+            ReferencedContainer = "container:CityCompanion.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
